@@ -1,6 +1,6 @@
 *.class
 *.pyc
 *.pyo
-system/lib/php/smarty/admin_compile
-system/lib/php/smarty/compile
-system/lib/php/smarty/page_cache
+system/lib/php/smarty/admin_compile/*
+system/lib/php/smarty/compile/*
+system/lib/php/smarty/page_cache/*
