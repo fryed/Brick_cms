@@ -13,6 +13,7 @@
 <script type="text/javascript" src="{$HOME}/system/lib/js/jquery.js"></script>
 <script type="text/javascript" src="{$ADMIN_PATH}/js/jHtmlArea.js"></script>
 <script type="text/javascript" src="{$ADMIN_PATH}/js/popup.js"></script>
+<script type="text/javascript" src="{$ADMIN_PATH}/js/editNav.js"></script>
 <script type="text/javascript" src="{$ADMIN_PATH}/js/admin.js"></script>
 
 <title>Brick :: {$page.title}</title>

@@ -66,6 +66,16 @@ $(document).ready(function(){
 	//init link toggler
 	$(".toggleLink").toggleLink();
 	
+	//init nav editor
+	$("a.editNav").click(function(e){
+		e.preventDefault();
+		$(this).fadeTo("fast",0,function(){
+			$("input.update").fadeIn("fast");
+			$(".menuPod .mainNav").editNav();
+			$(this).remove();
+		});
+	});
+	
 });
 
 //-----functions-----//

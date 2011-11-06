@@ -126,7 +126,8 @@
 			</div>
 			
 			<input type="hidden" name="table" value="main_nav"/>
-			<input type="submit" name="action" value="update menu"/>
+			<a href="#" class="button editNav">edit menu</a>
+			<input type="submit" name="action" class="update" value="update menu"/>
 		
 		</fieldset>
 	
