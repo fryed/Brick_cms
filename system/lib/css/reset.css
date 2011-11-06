@@ -1,0 +1,231 @@
+/*----------DETAILS-----------
+TITLE: RESET CSS
+AUTHOR: ED FRYER
+----------------------------*/	
+
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, 
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+	vertical-align:baseline;
+	font-family:inherit;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	outline:0;
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+:focus {
+	outline:0;
+}
+
+body {
+	background:white;
+	line-height:1;
+	color:black;
+	font-size:9pt;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration:none;
+}
+
+a, a:visited, a:active {
+	color:#03509e;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+h1 {
+	font-size:20px;
+}	
+
+h2 {
+	font-size:18px;
+}
+
+h3 {
+	font-size:16px;
+}
+
+h4 {
+	font-size:14px;
+}
+
+hr {
+	height:1px;
+	background-color:#ccc;
+	color:#ccc;
+	border:0px;
+	width:90%;
+}
+
+.floatLeft {
+	float:left; 
+}
+
+.floatRight { 
+	float:right; 
+}
+
+.pad10 { 
+	padding:10px; 
+}
+
+.pad20 {
+	padding:20px;
+}
+
+.padTB {
+	float:left;
+	padding:10px 0 10px 0;
+}
+
+.padLR {
+	float:left;
+	padding:0px 10px 0px 10px;
+}	
+
+.left { 
+	text-align:left;
+}
+
+.right { 
+	text-align:right; 
+}
+
+.center { 
+	text-align:center; 
+}
+
+.pointer { 
+	cursor:pointer; 
+}
+
+.clearBoth {
+	clear:both;
+}
+
+br.clearBoth {
+	height:0px;
+	line-height:0px;
+}
+
+.clearFloat:after {
+	content:".";
+	clear:both;
+	visibility:hidden;
+	height:0px;
+	width:100%;
+	line-height:0px;
+}
+
+p { 
+	line-height:1.3em;
+	padding-bottom:10px;
+}
+
+.bold {	
+	font-weight:bold; 
+}
+
+.italic {
+	font-style:italic;
+}
+
+strong {
+	font-weight:bold;
+}	
+
+table {
+	border-collapse:separate;
+	border-spacing:0;
+}
+
+caption, th, td {
+	font-weight:normal;
+	text-align:left;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+form {
+	margin-bottom:0px;
+}
+
+fieldset {
+	padding:10px 0 10px 0;
+	float:left;
+}	
+
+textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	width:200px;
+	height:80px;
+	font-size:inherit;
+	margin-bottom:5px;
+}
+
+label {
+	float:left;
+	width:100px;
+	font-weight:bold;
+	padding-top:3px;
+}
+	
+input {
+	float:left;
+	width:200px;
+	margin-bottom:5px;
+	background-color:transparent;
+	border:1px solid #ccc;
+}
+
+select {
+	float:left;
+	width:100px;
+	margin-bottom:5px;
+}
+
+.button {
+	border:none;
+	cursor:pointer;
+}
+
+img {
+	border:0px; display: block;
+}
+	
+a.fryed, a:visited.fryed {
+	color:#30b9f2;
+	font-weight:bold;
+}	
+
+.floatNone {
+	float:none;
+}	
+
+.hidden {
+	display:none;
+}
+
+.inVisible {
+	visibility:hidden;
+}

@@ -1,0 +1,18 @@
+/*----------THE STYLES FO THE TEXT EDITOR IFRAME-----------*/
+
+body {
+	padding:10px;
+	font-size:11px;
+}
+
+ul li {
+	list-style-type:disc;
+	list-style-position:inside;
+	padding:0 0 5px 0;
+}
+
+ol li {
+	list-style-type:decimal;
+	list-style-position:inside;
+	padding:0 0 5px 0;
+}

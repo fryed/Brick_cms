@@ -1,0 +1,4 @@
+#default robots.txt for brick cms stops the indexing of admin pages
+
+User-agent: *
+Disallow: /admin/
