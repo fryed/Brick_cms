@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2011-11-05 16:14:51
+<?php /* Smarty version 2.6.20, created on 2011-11-06 11:36:40
          compiled from cms-nav.tpl */ ?>
 <ul>
 	<li <?php if ($this->_tpl_vars['page']['active'] == 'dashboard'): ?>class="active"<?php endif; ?>><a href="<?php echo $this->_tpl_vars['ADMIN_HOME']; ?>
