@@ -19,11 +19,10 @@ $.fn.editNav = function(options){
 		element.addClass("editing");
 		
 		//expand all subnavs and set el height
-		element.find(".subNav").slideDown(100,function(){
-			//get element height
-			var elHeight = element.height();
-			element.css("height",elHeight);
-		});
+		element.find(".subNav").show();
+		//get element height
+		var elHeight = element.height();
+		element.css("height",elHeight);
 
 		//stop the links working
 		element.find("a").click(function(e){
@@ -33,6 +32,18 @@ $.fn.editNav = function(options){
 		//add delete
 		li.each(function(){
 			$(this).find("> a").after("<span class='delete'>x</span>");
+		});
+		
+		//change markup
+		li.each(function(){
+			var li = $(this);
+			var ul = li.find("ul");
+			var isUl = ul.length;
+			if(isUl > 0){
+				var newUl = ul.clone();
+				ul.remove();
+				li.after(newUl);
+			}
 		});
 		
 		//-----handle dragging-----//
@@ -75,17 +86,16 @@ $.fn.editNav = function(options){
 					var height = $(this).outerHeight();
 					var dragOffset = element.find(".dragger").offset();
 					if(dragOffset.top >= liOffset.top+(height/2) && dragOffset.top <= liOffset.top+height+(height/2)){
-						var isSpacer = element.find(".spacer").length;
+						var isSpacer = $(this).next(".spacer").length;
 						if(isSpacer == 0){
 							var el = $(this);
 							var spacer = "<li class='spacer' style='height:"+liHeight+"px;'></li>";
-							element.find("li").removeClass("over");
-							el.addClass("over").after(spacer);
+							el.after(spacer);
 							element.find(".spacer").slideDown(100);
 							options.timer = setTimeout(function(){
 								var hasUl = el.find("ul").length;
 								if(hasUl == 0){
-									el.append("<ul></ul>").removeClass("over");
+									el.after("<ul class='subNav'></ul>");
 								}
 								var newLi = element.find(".dragger").clone().removeClass("dragger").addClass("lastMoved");
 								element.find(".dragger,.spacer").remove();
@@ -97,7 +107,7 @@ $.fn.editNav = function(options){
 							},options.addPause);
 						}
 					}else{
-						$(this).removeClass("over").next(".spacer").slideUp(100,function(){
+						$(this).next(".spacer").slideUp(100,function(){
 							$(this).remove();
 							clearTimeout(options.timer);
 						});
@@ -118,9 +128,9 @@ $.fn.editNav = function(options){
 					options.li.slideDown(100).removeClass("moving");
 				}else{
 					var newLi = element.find(".dragger").clone().removeClass("dragger").addClass("lastMoved");
-					element.find(".dragger,.spacer").remove();
 					options.li.remove();
-					element.find(".over").removeClass("over").after(newLi);
+					element.find(".spacer:first").after(newLi);
+					element.find(".dragger,.spacer").remove();
 					updateOrder();
 					updateParents();
 				}
@@ -150,7 +160,8 @@ $.fn.editNav = function(options){
 		function updateParents(){
 			element.find("> li input[name='parent']").val(0);
 			element.find("ul").each(function(){
-				var name = $(this).parent("li").find("> a").text();
+				var name = $(this).prev("li").find("> a").text();
+				alert(name);
 				$(this).find("> li").each(function(){
 					var li = $(this);
 					li.find("input[name='parent']").val(name);

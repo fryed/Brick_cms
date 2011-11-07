@@ -587,10 +587,11 @@ header .logo {
 
 .editing ul {
 	position:relative;
+	
 }
 
-.editing ul li:first-child {
-	border-radius:2px 2px 0 0;
+.editing .subNav {
+	padding:0 0 0 10px;
 }
 
 .editing li.dragger {
@@ -619,10 +620,6 @@ header .logo {
 .editing li {
 	border-bottom:1px solid #fff;
 	background:#efefef;
-}
-
-.editing ul.subNav li:last-child {
-	border:none;
 }
 
 .editing .lastMoved {
