@@ -203,6 +203,10 @@
 				</select>
 				<br class="clearBoth"/>
 				
+				<label>Max pages pp:</label>
+				<input type="number" name="max_pages" value="{$settings.max_pages}" required="required" placeholder="max pages per page"/>
+				<br class="clearBoth"/>
+				
 				<label>Max news items pp:</label>
 				<input type="number" name="max_news" value="{$settings.max_news}" required="required" placeholder="max news items per page"/>
 				<br class="clearBoth"/>

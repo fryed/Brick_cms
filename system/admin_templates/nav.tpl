@@ -11,15 +11,6 @@
 			<input type="hidden" name="menu_order-{$row.id}" class="order" value="{$row.menu_order}"/>
 			<input type="hidden" name="parent-{$row.id}" class="parent" value=""/>
 			<input type="checkbox" class="delete" name="item{$row.id}"/>
-			
-			{*<select name="parent-{$row.id}">
-				<option value=">-1">top level</option>
-				{foreach from=$site.pages item=section}
-					{if $section.url != "/" && $section.url != $row.url}
-					<option value="{$section.url}>{$section.id}" {if  $row.section == $section.url}selected="selected"{/if}>{$section.url}</option>
-					{/if}
-				{/foreach}
-			</select>*}
 
 		</div>
 		

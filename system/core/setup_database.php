@@ -334,6 +334,7 @@ $table = "
 		blog tinyint(1) not null,
 		max_news int(11) not null default '10',
 		max_blog int(11) not null default '10',
+		max_pages int(11) not null default '10',
 		max_latest_news int(11) not null,
 		max_latest_blog int(11) not null,
 		max_upload_size int(11) not null,

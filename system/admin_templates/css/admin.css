@@ -410,10 +410,6 @@ header .logo {
 	color:orange;
 }
 
-.nojs .cmsNav li:hover .cmsSubNav {
-	display:block;
-}
-
 #overlay {
 	position:absolute;
 	top:0px;
@@ -635,46 +631,6 @@ header .logo {
 	text-align:center;
 	line-height:10px;
 	margin:5px;
-}
-
-/*--no js--*/
-
-.nojs .leftCol .mainNav li {
-	width:100%;
-	float:left;
-}
-
-.nojs .leftCol .mainNav a {
-	width:100%;
-	float:left;
-	margin:0 0 5px 0;
-}
-
-.nojs .leftCol .mainNav .inputHolder {
-	display:block;	
-	width:100%;
-	float:left;
-}	
-
-.nojs .leftCol .mainNav input[type="text"], 
-.nojs .leftCol .mainNav select {
-	float:left;
-	width:20%;
-	margin:0 10px 0 0;
-}
-
-.nojs .leftCol .mainNav select {
-	width:50%;	
-}	
-
-.nojs .leftCol .mainNav input[type="checkbox"] {
-	float:left;
-	width:auto;
-	margin:12px 0 0 0;
-} 
-
-.nojs .leftCol .mainNav .inputHolder { 
-	display:block;
 }
 
 /*-----MID COL-----*/

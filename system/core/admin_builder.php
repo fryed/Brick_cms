@@ -40,6 +40,13 @@ class ADMINbuilder extends DBconnect {
 			break;
 			
 			case "/pages":
+				$PL = new pageLister();
+				$PL->table 							= 	"pages";
+				$PL->posts 							= 	$_POST;
+				$PL->paging 						= 	true;
+				$PL->settingsArray 					= 	$this->settingsArray;
+				$this->pageInfoArray["page_list"]	= 	$PL->getPages();	
+				$this->settingsArray				= 	$PL->getSettings();
 				$this->pageInfoArray["template"]	=	"pages.tpl";
 				$this->pageInfoArray["title"]		=	"Pages";
 				$this->pageInfoArray["active"]		=	"pages";

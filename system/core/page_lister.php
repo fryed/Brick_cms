@@ -17,7 +17,7 @@ class pageLister extends DBconnect{
 		
 		//get params
 		$params = $this->getParams();
-
+		
 		//get pages from db
 		$pageArray 		= DBconnect::queryArray("*","$this->table",$params);
 		$this->pages 	= array();
@@ -75,9 +75,13 @@ class pageLister extends DBconnect{
 		if($this->paging){
 			
 			//set init limits	
-			$limit1 = 1;
+			$limit1 = 0;
 			
 			switch($this->table){
+				case "pages":
+				$limit2 = $this->settingsArray["max_pages"];
+				break;	
+				
 				case "blog":
 				$limit2 = $this->settingsArray["max_blog"];
 				break;	
@@ -105,7 +109,7 @@ class pageLister extends DBconnect{
 			//work out which buttons to show
 			$prev = true;
 			$next = true;
-			if($limit1 == 1)
+			if($limit1 == 0)
 				$prev 	= false;
 			$isNext = DBconnect::query("id","$this->table","LIMIT $limit2,$limit2");
 			if(!is_array($isNext))

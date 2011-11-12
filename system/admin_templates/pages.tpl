@@ -12,7 +12,7 @@
 		<h3>Pages</h3>
 		<hr/>
 		
-		{foreach from=$site.pages  item=page}
+		{foreach from=$page.page_list  item=page}
 		<div class="row">
 				
 			<div class="leftRow">
@@ -41,6 +41,8 @@
 		{foreachelse}
 			<p>No pages found</p>
 		{/foreach}
+		
+		{include file="paging.tpl"}
 	
 		<br class="clearBoth"/>
 	
