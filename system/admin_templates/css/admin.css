@@ -633,6 +633,12 @@ header .logo {
 	margin:5px;
 }
 
+/*--add a link--*/
+
+.leftCol .linkOptions {
+	display:none;
+}
+
 /*-----MID COL-----*/
 
 .midCol .pod {

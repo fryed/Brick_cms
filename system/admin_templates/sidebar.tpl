@@ -148,24 +148,37 @@
 		
 		<fieldset>
 			
-			<label>Name:</label>
-			<input type="text" name="name" value="" required="required" placeholder="name"/>
-			<br class="clearBoth"/>
-			
-			<label>Url:</label>
-			<input type="url" name="link" value="http://www." required="required" placeholder="url"/>
-			<br class="clearBoth"/>
-			
 			<label>Type:</label>
-			<select name="type">
-				<option value="link" selected="selected">link</option>
-				<option value="page">page</option>
+			<select name="type" id="linkType">
+				<option value="page" selected="selected">page</option>
+				<option value="link">link</option>
 			</select>
 			<br class="clearBoth"/>
 			
+			<div class="pageOptions">
+				<label>Page:</label>
+				<select name="link" id="link" required="required">
+					{foreach from=$site.pages item=section}
+					<option value="{$section.url}">{$section.title}</option>
+					{foreachelse}
+					<option value="">no pages found</option>
+					{/foreach}
+				</select>
+				<input type="hidden" name="name" required="required" class="name" value=""/>
+			</div>
+
+			<div class="linkOptions">
+				<label>Name:</label>
+				<input type="text" name="name" value="" disabled="disabled" placeholder="name"/>
+				<br class="clearBoth"/>
+				
+				<label>Url:</label>
+				<input type="url" name="link" value="http://www." disabled="disabled" placeholder="url"/>
+				<br class="clearBoth"/>
+			</div>
+			
 			<input type="hidden" name="parent" value="-1"/>
 			<input type="hidden" name="menu_order" value="1"/>
-			
 			<input type="hidden" name="table" value="main_nav"/>
 			
 			<input type="submit" name="action" value="add link"/>		

@@ -88,6 +88,9 @@ $(document).ready(function(){
 		}
 	});
 	
+	//init leftcol add a link
+	addLink();
+	
 });
 
 //-----functions-----//
@@ -361,6 +364,28 @@ $.fn.toggleLink = function(){
 			}	
 		}
 		
+	});
+	
+}
+
+//--function that handles adding a link to main menu--//
+function addLink(){
+	
+	var name = $(".pageOptions #link option:first").text();
+	$(".pageOptions .name").val(name);
+	$("#linkType").change(function(){
+		var val = $(this).val();
+		if(val == "page"){
+			$(".pageOptions").show().find("input,select").attr("required",true).removeAttr("disabled");
+			$(".linkOptions").hide().find("input,select").removeAttr("required").attr("disabled",true);
+			$("#link").change(function(){
+				var name = $(this).find("option:selected").text();
+				$(".pageOptions .name").val(name);
+			});
+		}else{
+			$(".linkOptions").show().find("input,select").attr("required",true).removeAttr("disabled");;
+			$(".pageOptions").hide().find("input,select").attr("disabled",true).removeAttr("required");
+		}
 	});
 	
 }
