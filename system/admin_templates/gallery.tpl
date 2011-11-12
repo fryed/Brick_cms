@@ -26,9 +26,11 @@
 				{/foreach}
 				
 				<br class="clearBoth"/>
+				
+				<hr/>
 			
 				<input type="hidden" name="table" value="images"/>
-				<input type="submit" name="action" value="delete selected"/>
+				<input type="submit" name="action" class="delete" value="delete selected"/>
 		
 			</fieldset>
 			

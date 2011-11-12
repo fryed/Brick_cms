@@ -34,7 +34,7 @@
 				{/foreach}
 				
 				{if $site.user_type == "developer"}
-				<input type="submit" name="action" value="uninstall selected"/>
+				<input type="submit" name="action" class="delete" value="uninstall selected"/>
 				<input type="submit" name="action" value="toggle build mode"/>
 				{/if}
 				

@@ -55,7 +55,9 @@ class PAGEbuilder {
 			case "admin":
 			if(!$this->pageInfoArray["custom"]){
 				$this->pageInfoArray["page_template"] 	= $this->pageInfoArray["template"];
-				$this->pageInfoArray["template"]		= "edit-page.tpl";
+				if($this->pageInfoArray["active"] == "pages"){
+					$this->pageInfoArray["template"]	= "edit-page.tpl";
+				}
 			}
 			$cacheId = "admin";
 			break;

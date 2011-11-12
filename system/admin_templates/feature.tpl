@@ -75,7 +75,7 @@
 					<input type="hidden" name="img_src" value="{$feature.img_src}"/>
 					
 					<input type="submit" name="action" value="edit feature"/>
-					<input type="submit" name="action" value="delete"/>
+					<input type="submit" name="action" class="delete" value="delete"/>
 			
 				</fieldset>
 				

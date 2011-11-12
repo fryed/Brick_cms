@@ -47,7 +47,7 @@
 				<br class="clearBoth"/>
 				
 				<input type="hidden" name="table" value="messages"/>
-				<input type="submit" name="action" value="delete selected"/>
+				<input type="submit" name="action" class="delete" value="delete selected"/>
 		
 			</fieldset>
 		

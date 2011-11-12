@@ -89,8 +89,8 @@
 				<input type="hidden" name="table" value="pages"/>
 				
 				<input type="submit" name="action" value="save changes"/>
-				{if $page.url != "/"}
-					<input type="submit" name="action" value="delete page"/>
+				{if $page.url != "/" && $site.user_type != "user"}
+					<input type="submit" name="action" class="delete" value="delete page"/>
 				{/if}	
 				
 			</fieldset>
@@ -226,7 +226,7 @@
 				{if $page.downloads}
 					<br class="clearBoth"/>
 					<input type="hidden" name="table" value="downloads"/>
-					<input type="submit" name="action" value="delete selected"/>
+					<input type="submit" name="action" class="delete" value="delete selected"/>
 				{/if}
 		
 			</fieldset>

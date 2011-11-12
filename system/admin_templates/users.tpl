@@ -78,7 +78,7 @@
 					<input type="hidden" name="id" value="{$user.id}"/>
 					
 					<input type="submit" name="action" value="edit user"/>
-					{if $site.user_type != "user"}<input type="submit" name="action" value="delete"/>{/if}
+					{if $site.user_type != "user"}<input type="submit" name="action" class="delete" value="delete"/>{/if}
 					
 				</fieldset>
 				

@@ -9,6 +9,8 @@ $this->tableCheck();
 switch($this->posts["table"]){
 		
 	case "pages":
+	//set url from uri
+	$this->posts["url"] = $this->posts["uri"];	
 	//set message
 	$_SESSION["messages"][] = "Message: Page created.";
 	break;	

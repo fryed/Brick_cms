@@ -63,7 +63,9 @@
 				<input type="hidden" name="table" value="news"/>
 				
 				<input type="submit" name="action" value="save changes"/>
-				<input type="submit" name="action" value="delete article"/>
+				{if $site.user_type != "user"}
+					<input type="submit" name="action" class="delete" value="delete article"/>
+				{/if}
 				
 			</fieldset>
 			
@@ -133,7 +135,6 @@
 				
 				<input type="hidden" name="table" value="downloads"/>
 				<input type="hidden" name="area" value="news"/>
-				<input type="submit" name="action" value="upload"/>
 				
 				<input type="submit" name="action" value="upload"/>
 				
@@ -166,7 +167,7 @@
 				{if $page.downloads}
 					<br class="clearBoth"/>
 					<input type="hidden" name="table" value="downloads"/>
-					<input type="submit" name="action" value="delete selected"/>
+					<input type="submit" name="action" class="delete" value="delete selected"/>
 				{/if}
 		
 			</fieldset>

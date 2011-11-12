@@ -76,6 +76,18 @@ $(document).ready(function(){
 		});
 	});
 	
+	//init confirm popups
+	$(".delete").confirm({
+		width 		: "300px",
+		callback 	: function(el,form,answer){
+			if(answer){
+				var action = el.val();
+				form.append("<input type='hidden' name='action' value='"+action+"'/>")
+				form.submit();
+			}
+		}
+	});
+	
 });
 
 //-----functions-----//

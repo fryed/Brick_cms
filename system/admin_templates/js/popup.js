@@ -100,28 +100,29 @@ $.fn.confirm = function(options){
 		callback		: function callback(){},
 		popupSpeed 		: "fast",
 		overlaySpeed	: "fast",
-		width			: "200px",
-		callback		: false
+		width			: "200px"
 	};
 	
 	var options = $.extend(defaults, options);
 	
 	return this.each(function(){
+		
+		var element = $(this);
+		var form = element.parents("form");
 	
-		$(this).click(function(e){
+		element.click(function(e){
 			e.preventDefault();
-			var element = $(this);
 			var href = element.attr("href");
-			var title = element.attr("title");
+			var title = "Are you sure?"
 			var content = "<p>"+options.question+"</p>\
 			<br class='clearBoth'/>\
-			<input type='button' class='neg' value='"+options.buttonNeg+"' name='false'/>\
-			<input type='button' class='pos' value='"+options.buttonPos+"' name='true'/>\
+			<input type='button' class='neg button' value='"+options.buttonNeg+"' name='false'/>\
+			<input type='button' class='pos button' value='"+options.buttonPos+"' name='true'/>\
 			<br class='clearBoth'/>";
 			openOverlay(options.overlaySpeed,options.overlayColor,function(){
 				openPopup(options.popupSpeed,title,content,options.width);
-				$(".popupContent").addClass("confirmDialogue");
 				$("#popup .close").remove();
+				$("#popup").addClass("confirm");
 			});		
 		});
 		
@@ -132,7 +133,7 @@ $.fn.confirm = function(options){
 				answer = false;	
 			closePopup(options.popupSpeed,function(){
 				closeOverlay(options.overlaySpeed,function(){
-					options.callback(answer);
+					options.callback(element,form,answer);
 				});
 			});
 		});
@@ -175,11 +176,13 @@ function closeOverlay(speed,callback){
 function openPopup(speed,title,content,width,callback){
 	
 	$("body").append("<div id='popup'>\
-		<div class='popupHeader'>\
-			<span class='close'>close</span>\
-			<h2>"+title+"</h2>\
+		<div class='innerPopup'>\
+			<div class='popupHeader'>\
+				<span class='close'>close</span>\
+				<h2>"+title+"</h2>\
+			</div>\
+			<div class='popupContent'>"+content+"</div>\
 		</div>\
-		<div class='popupContent'>"+content+"</div>\
 	</div>");
 	
 	if(width)
@@ -207,9 +210,4 @@ function closePopup(speed,callback){
 			callback();
 	});
 	
-}
-
-//for testing
-function test(){
-	alert("test succeeded");
 }

@@ -942,6 +942,8 @@ table tr.new td {
 .messageRight {
 	float:right;
 	width:78%;
+	border-left:1px dotted #ccc;
+	padding:0 0 0 10px;
 }
 
 /*-----POPUPS-----*/
@@ -1008,6 +1010,44 @@ table tr.new td {
 	width:66px;
 	height:22px;
 	background:url(../images/lightbox-close.gif) no-repeat;
+}
+
+#popup.confirm {
+	background:rgba(0,0,0,0.5);
+	padding:15px;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+
+#popup.confirm .innerPopup {
+	background:#fff;
+	border-radius:6px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	overflow:hidden;
+}
+
+#popup.confirm .popupHeader {
+	background:#03509E;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#478AF8",endColorstr="#3D79DB");
+	background:-webkit-gradient(linear,left top,left bottom,from(#478AF8),to(#3D79DB));
+	background:-moz-linear-gradient(top,#478AF8,#3D79DB);
+	width:100%;
+	padding:0px;
+	border-radius:6px 6px 0 0;
+	-moz-border-radius:6px 6px 0 0;
+	-webkit-border-radius:6px 6px 0 0;
+}
+
+#popup.confirm .popupHeader h2 {
+	padding:10px;
+	font-size:15px;
+	text-shadow:-1px -1px 1px #424242;
+}
+
+#popup.confirm .popupContent p {
+	display:none;	
 }
 
 /*-----PAGING-----*/

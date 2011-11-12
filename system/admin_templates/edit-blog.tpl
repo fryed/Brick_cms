@@ -77,7 +77,9 @@
 				<input type="hidden" name="table" value="blog"/>
 				
 				<input type="submit" name="action" value="save changes"/>
-				<input type="submit" name="action" value="delete article"/>	
+				{if $site.user_type != "user"}
+					<input type="submit" name="action" class="delete" value="delete article"/>
+				{/if}
 				
 			</fieldset>
 			
@@ -107,7 +109,7 @@
 				
 				<input type="hidden" name="table" value="blog_comments"/>
 				
-				<input type="submit" name="action" value="delete selected"/>
+				<input type="submit" name="action" class="delete" value="delete selected"/>
 				
 			</fieldset>
 			
@@ -210,7 +212,7 @@
 				{if $page.downloads}
 					<br class="clearBoth"/>
 					<input type="hidden" name="table" value="downloads"/>
-					<input type="submit" name="action" value="delete selected"/>
+					<input type="submit" name="action" class="delete" value="delete selected"/>
 				{/if}
 		
 			</fieldset>
