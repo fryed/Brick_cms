@@ -6,25 +6,21 @@
 		
 		<a href="{if $row.external != true}{$ADMIN_HOME}{/if}{$row.url}">{$row.name}</a>
 		
-		<div class="inputHolder">
-		
-			<input type="text" name="menu_order-{$row.id}" value="{$row.menu_order}"/>
+		<div class="inputHolder" data-id="{$row.page_id}" data-url="{$row.url}">
 			
-			{if $row.uri != "/"}
+			<input type="hidden" name="menu_order-{$row.id}" class="order" value="{$row.menu_order}"/>
+			<input type="hidden" name="parent-{$row.id}" class="parent" value=""/>
+			<input type="checkbox" class="delete" name="item{$row.id}"/>
 			
-			<select name="parent-{$row.id}">
+			{*<select name="parent-{$row.id}">
 				<option value=">-1">top level</option>
 				{foreach from=$site.pages item=section}
 					{if $section.url != "/" && $section.url != $row.url}
 					<option value="{$section.url}>{$section.id}" {if  $row.section == $section.url}selected="selected"{/if}>{$section.url}</option>
 					{/if}
 				{/foreach}
-			</select>
-			
-			<input type="checkbox" name="item{$row.id}"/>
-			
-			{/if}
-			
+			</select>*}
+
 		</div>
 		
 		{if $row.subNav}
@@ -33,11 +29,6 @@
 		{/if}	
 		
 	</li>
-	
-	<li><a href="">test1</a></li>
-	<li><a href="">test2</a></li>
-	<li><a href="">test3</a></li>
-	
 	
 {/foreach}
 

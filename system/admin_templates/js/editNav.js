@@ -3,7 +3,8 @@
 $.fn.editNav = function(options){
 	
 	var defaults = {
-		addPause : 2000
+		addPause 	: 2000,
+		debug 		: false
 	}
 	
 	var options = $.extend(defaults,options);
@@ -35,16 +36,11 @@ $.fn.editNav = function(options){
 		});
 		
 		//change markup
-		li.each(function(){
-			var li = $(this);
-			var ul = li.find("ul");
-			var isUl = ul.length;
-			if(isUl > 0){
-				var newUl = ul.clone();
-				ul.remove();
-				li.after(newUl);
-			}
-		});
+		markup(li);
+		
+		//update the parents and order
+		updateOrder();
+		updateParents();
 		
 		//-----handle dragging-----//
 		
@@ -78,10 +74,10 @@ $.fn.editNav = function(options){
 			}
 		});
 		
-		//make space
+		//make space and add child
 		$(document).mousemove(function(e){
 			if(options.mousedown && options.li){
-				element.find("li").not(".spacer").not(".moving").not(".deleted").each(function(){
+				element.find("li").not(".spacer").not(".moving").not(".deleted").not(".dragger").each(function(){
 					var liOffset = $(this).offset();
 					var height = $(this).outerHeight();
 					var dragOffset = element.find(".dragger").offset();
@@ -92,24 +88,33 @@ $.fn.editNav = function(options){
 							var spacer = "<li class='spacer' style='height:"+liHeight+"px;'></li>";
 							el.after(spacer);
 							element.find(".spacer").slideDown(100);
+							
+							//handle adding child li to submenu
+							clearTimeout(options.timer);
 							options.timer = setTimeout(function(){
-								var hasUl = el.find("ul").length;
-								if(hasUl == 0){
-									el.after("<ul class='subNav'></ul>");
-								}
 								var newLi = element.find(".dragger").clone().removeClass("dragger").addClass("lastMoved");
 								element.find(".dragger,.spacer").remove();
+								var hasUl = el.next("ul").length;
+								if(hasUl == 0){
+									el.append("<ul class='subNav'></ul>");
+									ul = el.find("ul");
+								}else{
+									ul = el.next("ul");
+								}
+								ul.append(newLi);
 								options.li.remove();
-								el.find("ul").append(newLi);
+								li = element.find("li");
+								markup(li);
 								updateOrder();
 								updateParents();
 								options.li = false;
 							},options.addPause);
+							return;
+						
 						}
 					}else{
 						$(this).next(".spacer").slideUp(100,function(){
 							$(this).remove();
-							clearTimeout(options.timer);
 						});
 					}
 				});
@@ -142,7 +147,7 @@ $.fn.editNav = function(options){
 		
 		element.find("span.delete").live("click",function(){
 			var li = $(this).parent("li");
-			li.slideUp(100).addClass("deleted").find("input:checkbox").attr("checked",true);
+			li.slideUp(100).addClass("deleted").find("> .inputHolder input.delete").attr("checked",true);
 		});
 		
 		//-----handle updating inputs-----//
@@ -152,19 +157,19 @@ $.fn.editNav = function(options){
 			element.find("li").each(function(i){
 				i++;
 				var li = $(this);
-				li.find("input[name='order']").val(i);
+				li.find("input.order").val(i);
 			});
 		}
 		
 		//update parents
 		function updateParents(){
-			element.find("> li input[name='parent']").val(0);
+			element.find("> li input.parent").val(">-1");
 			element.find("ul").each(function(){
-				var name = $(this).prev("li").find("> a").text();
-				alert(name);
+				var id = $(this).prev("li").find("> .inputHolder").attr("data-id");
+				var url = $(this).prev("li").find("> .inputHolder").attr("data-url");
 				$(this).find("> li").each(function(){
 					var li = $(this);
-					li.find("input[name='parent']").val(name);
+					li.find("input.parent").val("").val(url+">"+id);
 				});
 			});
 		}
@@ -172,17 +177,43 @@ $.fn.editNav = function(options){
 		//-----handle saving order-----//
 		
 		//on submit
-		$(".update").click(function(){
-			var result = "<br class='clearBoth'/><p>";
-			element.find("li").each(function(){
-				var name = $(this).find("> a").text();
-				var order = $(this).find("> input[name='order']").val();
-				var parent = $(this).find("> input[name='parent']").val();				
-				result = result+name+" - "+order+" - "+parent+",<br/>";
-			});
-			result = result+"</p>";
-			$("body").append(result);
+		$(".update").click(function(e){
+			if(options.debug){
+				e.preventDefault();
+				element.find("li").each(function(){
+					var name = $(this).find("> a").text();
+					var order = $(this).find("> .inputHolder input.order").val();
+					var parent = $(this).find("> .inputHolder input.parent").val();				
+					var deleted = $(this).find("> .inputHolder input.delete").attr("checked");				
+					var result = name+" - "+order+" - "+parent+" - "+deleted;
+					console.log(result);
+				});
+			}
 		});
+		
+		//-----redo markup-----//
+		
+		function markup(li){
+			//tidy up empty uls
+			ul = element.find("ul");
+			ul.each(function(){
+				var hasChildren = $(this).find("li").length;
+				if(hasChildren == 0){
+					$(this).remove();
+				}
+			});
+			//sort out remaining html
+			li.each(function(){
+				var li = $(this);
+				var ul = li.find("ul");
+				var isUl = ul.length;
+				if(isUl > 0){
+					var newUl = ul.clone();
+					ul.remove();
+					li.after(newUl);
+				}
+			});
+		}
 		
 	});
 	
