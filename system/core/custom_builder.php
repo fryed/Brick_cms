@@ -11,8 +11,8 @@ class CUSTOMbuilder {
 		
 		switch($this->pageUrl){
 			
+			//set custom search page info
 			case "/search":
-			//set custom page info
 			$this->pageInfoArray["template"] 	= "system/search.tpl";
 			$this->pageInfoArray["url"] 		= $this->pageUrl;
 			$this->pageInfoArray["uri"] 		= $this->pageUrl;
@@ -29,6 +29,15 @@ class CUSTOMbuilder {
 			$SEARCH = new SEARCHhandler();
 			$SEARCH->pageInfoArray	=	$this->pageInfoArray;
 			$this->pageInfoArray	=	$SEARCH->getResults();
+			break;
+			
+			//set custom maintenance page
+			case "/maintenance":
+			$this->pageInfoArray["template"] 	= "maintenance.tpl";
+			$this->pageInfoArray["title"] 		= "Maintenance";
+			$this->pageInfoArray["name"] 		= "Maintenance";
+			$this->pageInfoArray["enabled"] 	= true;
+			$this->pageInfoArray["custom"] 		= true;
 			break;
 			
 		}

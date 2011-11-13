@@ -26,13 +26,13 @@ class PAGEbuilder {
 				case "guard-dog.tpl":
 				$this->guardDog();	
 				break;
-
-				case "login.tpl":
-				$this->login();	
-				break;
 				
 				case "maintenance.tpl":
 				$this->maintenance();	
+				break;
+
+				case "login.tpl":
+				$this->login();	
 				break;
 
 				default:
@@ -122,8 +122,10 @@ class PAGEbuilder {
 		
 		//if in maintenance mode display maintennance tpl
 		if($this->settingsArray["maintenance"]){
-			if($this->settingsArray["ip_address"] != $this->settingsArray["stored_ip"])
-				$this->maintenance();
+			if($this->settingsArray["ip_address"] != $this->settingsArray["stored_ip"]){
+				header("location: ".$this->homePath."/maintenance");
+				exit;
+			}
 		}
 		
 	}
@@ -138,6 +140,7 @@ class PAGEbuilder {
 	
 	public function guardDog(){
 		
+		$this->CMS->assign("settings",$this->settingsArray);
 		$this->CMS->display("../../system/admin_templates/guard-dog.tpl");
 		exit;
 			
@@ -150,9 +153,10 @@ class PAGEbuilder {
 		exit;
 		
 	}
-	
+
 	public function maintenance(){
 		
+		$this->CMS->assign("site",$this->siteInfoArray);
 		$this->CMS->display("../../system/admin_templates/maintenance.tpl");
 		exit;
 		

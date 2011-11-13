@@ -394,6 +394,7 @@ if($settingsArray["custom_errors"]){
 //display main.tpl and assign vars if page exists in db, build custom if not, 404 if page not found
 $BUILD = new PAGEbuilder();
 $BUILD->CMS				= $CMS;
+$BUILD->homePath		= $homePath;
 $BUILD->area			= $area;
 $BUILD->pageInfoArray 	= $pageInfoArray;
 $BUILD->navInfoArray 	= $navInfoArray;

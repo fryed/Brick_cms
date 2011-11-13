@@ -229,11 +229,15 @@ hr {
 }
 
 .topBar .clearCache input[type="submit"] {
-	padding:3px 5px;
-	margin:3px 0 0 20px;
-	font-size:11px;
-	width:auto;
+	margin:7px 0 0 7px;
+	font-size:1px;
+	overflow:hidden;
+	line-height:9999px;
+	width:15px;
+	height:14px;
 	min-width:0px;
+	background:url(../images/refresh.gif) no-repeat;
+	border:none;
 }
 
 .topBar .logDetails {
@@ -1020,6 +1024,24 @@ table tr.new td {
 
 .paging input {
 	float:left;
+	width:25px;
+	height:23px;
+	border:none;
+	font-size:1px;
+	overflow:hidden;
+	line-height:9999px;
+	min-width:0px;
+}
+
+.paging .arrowLeft,
+.paging .arrowLeft:hover {
+	background:url(../images/arrow-left.gif) no-repeat;
+	margin:0 10px 0 0;
+}
+
+.paging .arrowRight,
+.paging .arrowRight:hover {
+	background:url(../images/arrow-right.gif) no-repeat;
 }
 
 /*-----MISC SETUP AND LOGIN PAGES-----*/
@@ -1032,5 +1054,15 @@ table tr.new td {
 	width:350px;
 	margin:100px auto;
 	background:#fff;
+}
+
+/*--guard dog--*/
+
+#misc.guardDog header {
+	background:#ea1a1a;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f22020",endColorstr="#ea1a1a");
+	background:-webkit-gradient(linear,left top,left bottom,from(#f22020),to(#ea1a1a));
+	background:-moz-linear-gradient(top,#f22020,#ea1a1a);
+	border-top:10px solid #be0b0b;
 }
 

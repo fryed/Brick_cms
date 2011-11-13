@@ -243,12 +243,6 @@ class ADMINbuilder extends DBconnect {
 				$this->pageInfoArray["custom"]		=	true;
 			break;
 			
-			case "/maintenance":
-				$this->pageInfoArray["template"]	=	"maintenance.tpl";
-				$this->pageInfoArray["title"]		=	"Maintenance";
-				$this->pageInfoArray["custom"]		=	true;
-			break;
-				
 		}
 
 		//define page section if not set
