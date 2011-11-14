@@ -976,6 +976,10 @@ table tr.new td {
 
 /*--confirm popup--*/
 
+#popup.confirm {
+	margin-top:-100px;
+}
+
 #popup.confirm .popupContent p {
 	display:none;	
 }
@@ -1031,6 +1035,7 @@ table tr.new td {
 	-moz-border-radius:0px;
 	-webkit-border-radius:0px;
 	padding:10px;
+	margin-top:-100px;
 }
 
 #popup.lightBox .popupHeader {
