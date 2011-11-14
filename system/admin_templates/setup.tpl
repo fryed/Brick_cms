@@ -60,7 +60,8 @@
 				<!--STAGE 1 SETUP-->
 				{if $setup.step == 1}
 				
-				<h3>Setup - step 1</h3>
+				<h2>Setup - step 1</h2>
+				<hr/>
 				
 				<form method="post" action="">
 					
@@ -89,7 +90,8 @@
 				<!--STAGE 2 SETUP-->
 				{if $setup.step == 2}
 				
-				<h3>Setup - step 2</h3>
+				<h2>Setup - step 2</h2>
+				<hr/>
 				
 				<form method="post" action="">
 					

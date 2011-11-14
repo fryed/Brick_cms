@@ -44,7 +44,8 @@
 			
 			<div class="pad20">
 			
-				<h3>Login</h3>
+				<h2>Login</h2>
+				<hr/>
 			
 				<form method="post" action="">
 					

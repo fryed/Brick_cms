@@ -89,7 +89,42 @@ $(document).ready(function(){
 	});
 	
 	//init leftcol add a link
-	addLink();
+	$(".addLink").addLink();
+	
+	//add page helpers
+	$(".page #edit").helpers({
+		prefix : "page"
+	});
+	
+	//add blog helpers
+	$(".blog #edit").helpers({
+		prefix : "page"
+	});
+	
+	//add news helpers
+	$(".news #edit").helpers({
+		prefix : "page"
+	});
+	
+	//add brick helpers
+	$(".brick").helpers({
+		prefix : "brick"
+	});
+	
+	//add feature helpers
+	$(".feature").helpers({
+		prefix : "site.features"
+	});
+	
+	//add site settings helpers
+	$("#settings").helpers({
+		prefix : "site"
+	});
+	
+	//add site dev helpers
+	$("#devSettings").helpers({
+		prefix : "settings"
+	});
 	
 });
 
@@ -369,23 +404,65 @@ $.fn.toggleLink = function(){
 }
 
 //--function that handles adding a link to main menu--//
-function addLink(){
+$.fn.addLink = function(){
 	
-	var name = $(".pageOptions #link option:first").text();
-	$(".pageOptions .name").val(name);
-	$("#linkType").change(function(){
-		var val = $(this).val();
-		if(val == "page"){
-			$(".pageOptions").show().find("input,select").attr("required",true).removeAttr("disabled");
-			$(".linkOptions").hide().find("input,select").removeAttr("required").attr("disabled",true);
-			$("#link").change(function(){
-				var name = $(this).find("option:selected").text();
-				$(".pageOptions .name").val(name);
-			});
-		}else{
-			$(".linkOptions").show().find("input,select").attr("required",true).removeAttr("disabled");;
-			$(".pageOptions").hide().find("input,select").attr("disabled",true).removeAttr("required");
-		}
+	return this.each(function(){
+		
+		//define element
+		var element = $(this);
+		
+		//setup
+		var name = element.find(".pageOptions #link option:first").text();
+		element.find(".pageOptions .name").val(name);
+		
+		//on change of page select
+		element.find("#link").change(function(){
+			var name = $(this).find("option:selected").text();
+			element.find(".pageOptions .name").val(name);
+		});
+		
+		//on change of link type select
+		element.find("#linkType").change(function(){
+			var val = $(this).val();
+			if(val == "page"){
+				element.find(".pageOptions").show().find("input,select").attr("required",true).removeAttr("disabled");
+				element.find(".linkOptions").hide().find("input,select").removeAttr("required").attr("disabled",true);
+			}else{
+				element.find(".linkOptions").show().find("input,select").attr("required",true).removeAttr("disabled");;
+				element.find(".pageOptions").hide().find("input,select").attr("disabled",true).removeAttr("required");
+			}
+		});
+		
+	});
+	
+}
+
+//--function that adds helpers to inputs--//
+$.fn.helpers = function(options){
+	
+	var defaults = {
+		prefix : ""
+	}
+	
+	var options = $.extend(defaults,options);
+	
+	return this.each(function(){
+		
+		//define element
+		var element = $(this);
+		
+		//add helpers
+		element.find("input,select,textarea").not("input:submit").each(function(){
+			var item = $(this);
+			var name = item.attr("name");
+			var pageName = "."+element.attr("data-name");
+			if(pageName == ".undefined"){
+				pageName = "";
+			}
+			var title = "{$"+options.prefix+pageName+"."+name+"}";
+			item.attr("title",title);
+		});
+
 	});
 	
 }

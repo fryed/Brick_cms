@@ -1,4 +1,4 @@
-<section class="mainCol col">
+<section class="mainCol col page">
 
 	<h1>Edit "{$page.title}"</h1>
 	<hr/>

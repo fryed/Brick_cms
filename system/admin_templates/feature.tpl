@@ -14,7 +14,7 @@
 		<hr/>
 		
 		{foreach from=$site.features item=feature}
-		<div class="row">
+		<div class="row feature" data-name="{$feature.id}">
 
 			<form method="post" action="" enctype="multipart/form-data">
 				

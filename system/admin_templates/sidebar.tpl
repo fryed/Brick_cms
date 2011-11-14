@@ -139,7 +139,7 @@
 
 <br class="clearBoth"/>
 
-<div class="pod equalInput">
+<div class="pod equalInput addLink">
 	
 	<form method="post" action="">
 	

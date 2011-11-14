@@ -73,9 +73,9 @@ $.fn.popup = function(options){
 				";
 				openOverlay(options.overlaySpeed,options.overlayColor,function(){
 					openPopup(options.popupSpeed,title,content,options.width,function(){
-						$("#popup").addClass("lightBox");
 						$("#popup img").css("visibility","visible");
 					});
+					$("#popup").addClass("lightBox");
 				});	
 			}
 		});
@@ -115,7 +115,6 @@ $.fn.confirm = function(options){
 			var href = element.attr("href");
 			var title = "Are you sure?"
 			var content = "<p>"+options.question+"</p>\
-			<br class='clearBoth'/>\
 			<input type='button' class='neg button' value='"+options.buttonNeg+"' name='false'/>\
 			<input type='button' class='pos button' value='"+options.buttonPos+"' name='true'/>\
 			<br class='clearBoth'/>";
@@ -126,7 +125,7 @@ $.fn.confirm = function(options){
 			});		
 		});
 		
-		$("#popup input:button").live("click",function(){
+		$("#popup.confirm input:button").live("click",function(){
 			if($(this).attr("name") == "true")
 				answer = true;
 			else

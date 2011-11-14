@@ -22,7 +22,7 @@
 
 </head>
 
-<body class="nojs">
+<body class="nojs" data-area="{$page.active}">
 	
 <div class="container">
 	

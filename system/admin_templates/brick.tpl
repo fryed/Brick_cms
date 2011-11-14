@@ -1,4 +1,4 @@
-<section class="mainCol col">
+<section class="mainCol col brick" data-name="{$page.brick_name}">
 
 	<h1>{$page.title}</h1>
 	<hr/>
