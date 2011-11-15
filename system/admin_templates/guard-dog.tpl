@@ -9,6 +9,10 @@
 <link href="{$HOME}/system/lib/css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="{$ADMIN_PATH}/css/admin.css" rel="stylesheet" type="text/css" media="screen"/>
 
+<!--[if lt IE 9]>
+<script src="{$ADMIN_PATH}/js/ieHtml5.js"></script>
+<![endif]-->
+
 <title>Brick :: Guard dog</title>
 
 <link rel="icon" href="{$site.favicon.src}" type="image/x-icon">

@@ -1,12 +1,16 @@
 <section class="midCol col">
 	<div class="pod">
-		middle
+		<div class="pad10">
+			<iframe src="http://www.fryed.co.uk/dev"></iframe>
+		</div>
 	</div>
 </section>
 
 <section class="rightCol col">
 	<div class="pod">
-		right col
+		<div class="pad10">
+			<iframe src="http://www.fryed.co.uk/dev"></iframe>
+		</div>
 	</div>
 </section>
 

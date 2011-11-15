@@ -91,6 +91,9 @@
 	
 	<div id="comments">
 		
+		<h3>Comment list</h3>
+		<hr/>
+		
 		<form method="post" action="">
 	
 			<fieldset>
@@ -166,7 +169,7 @@
 				<hr/>
 				
 				<label>Upload resource:</label>
-				<input type="file" name="upload" value="" required="required" placeholder="file"/>
+				<input type="file" name="upload" required="required"/>
 				<br class="clearBoth"/>
 				
 				<label>Name:</label>

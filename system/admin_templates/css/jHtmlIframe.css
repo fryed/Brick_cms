@@ -5,6 +5,10 @@ body {
 	font-size:11px;
 }
 
+body p {
+	font-size:11px;
+}
+
 ul li {
 	list-style-type:disc;
 	list-style-position:inside;

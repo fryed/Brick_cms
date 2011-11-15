@@ -26,7 +26,7 @@
 			<fieldset class="equalInput">
 				
 				<label>Upload logo:</label>
-				<input type="file" name="upload" value="" required="required" placeholder="logo"/>
+				<input type="file" name="upload" required="required"/>
 				<br class="clearBoth"/>
 				
 				<label>Description:</label>
@@ -164,7 +164,7 @@
 					<option value="">no pages found</option>
 					{/foreach}
 				</select>
-				<input type="hidden" name="name" required="required" class="name" value=""/>
+				<input type="hidden" name="name" class="name" value=""/>
 			</div>
 
 			<div class="linkOptions">

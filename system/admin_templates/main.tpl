@@ -16,6 +16,10 @@
 <script type="text/javascript" src="{$ADMIN_PATH}/js/editNav.js"></script>
 <script type="text/javascript" src="{$ADMIN_PATH}/js/admin.js"></script>
 
+<!--[if lt IE 9]>
+<script src="{$ADMIN_PATH}/js/ieHtml5.js"></script>
+<![endif]-->
+
 <title>Brick :: {$page.title}</title>
 
 <link rel="icon" href="{$site.favicon.src}" type="image/x-icon">

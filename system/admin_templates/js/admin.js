@@ -248,12 +248,15 @@ $.fn.equalInput = function(options){
 		var inputWidth = width - options.labelWidth - 30;
 		
 		label.css("width",options.labelWidth);
-		element.find("select").css("width",inputWidth+18); 
+		element.find("select").css("width",inputWidth+18);
 		element
 			.find("input, textarea, .jHtmlArea")
 			.not("input:checkbox, input:radio, input:submit")
 			.css("width",inputWidth)
 		; 
+		if($.browser.msie || $.browser.mozilla){
+			element.find("input:file").css("width",inputWidth+18);
+		}
 		
 	});
 	

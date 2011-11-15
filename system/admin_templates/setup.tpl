@@ -15,6 +15,10 @@
 <script type="text/javascript" src="{$HOME}/system/admin_templates/js/popup.js"></script>
 <script type="text/javascript" src="{$HOME}/system/admin_templates/js/admin.js"></script>
 
+<!--[if lt IE 9]>
+<script src="{$ADMIN_PATH}/js/ieHtml5.js"></script>
+<![endif]-->
+
 <title>Brick :: Setup</title>
 
 <link rel="icon" href="{$site.favicon.src}" type="image/x-icon">

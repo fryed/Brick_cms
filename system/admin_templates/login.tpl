@@ -12,6 +12,10 @@
 <script type="text/javascript" src="{$HOME}/system/lib/js/jquery.js"></script>
 <script type="text/javascript" src="{$ADMIN_PATH}/js/admin.js"></script>
 
+<!--[if lt IE 9]>
+<script src="{$ADMIN_PATH}/js/ieHtml5.js"></script>
+<![endif]-->
+
 <title>Brick :: Login</title>
 
 <link rel="icon" href="{$site.favicon.src}" type="image/x-icon">

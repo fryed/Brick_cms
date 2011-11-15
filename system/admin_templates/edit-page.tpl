@@ -119,7 +119,7 @@
 				
 				<input type="hidden" name="name" value="{$page.name}"/>
 				<input type="hidden" name="page_id" value="{$page.id}"/>
-				<input type="hidden" name="parent" value="{$page.parent}"/>
+				<input type="hidden" name="parent" value="-1"/>
 				<input type="hidden" name="menu_order" value="1"/>
 				<input type="hidden" name="type" value="page"/>
 				
@@ -180,7 +180,7 @@
 				<hr/>
 				
 				<label>Upload resource:</label>
-				<input type="file" name="upload" value="" required="required" placeholder="file"/>
+				<input type="file" name="upload" required="required"/>
 				<br class="clearBoth"/>
 				
 				<label>Name:</label>

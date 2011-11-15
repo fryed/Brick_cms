@@ -80,7 +80,7 @@
 			<fieldset>
 				
 				<label>Module:</label>
-				<input type="file" name="module" value="" required="required" placeholder="file"/>
+				<input type="file" name="module" required="required"/>
 				<br class="clearBoth"/>
 				
 				<input type="submit" name="action" value="install module"/>

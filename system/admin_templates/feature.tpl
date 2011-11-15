@@ -58,12 +58,12 @@
 					
 					<div class="externalLink">
 						<label>Link:</label>
-						<input type="url" name="external_url" value="{$feature.url}"/>
+						<input type="url" name="external_url" placeholder="http://" value="{$feature.url}"/>
 						<br class="clearBoth"/>
 					</div>
 					
 					<label>Upload image:</label>
-					<input type="file" name="upload" value="" placeholder="file"/>
+					<input type="file" name="upload"/>
 					<br class="clearBoth"/>
 					
 					<label>Content:</label>
@@ -119,12 +119,12 @@
 				
 				<div class="externalLink">
 					<label>Link:</label>
-					<input type="url" name="external_url" value="" placeholder="http://"/>
+					<input type="url" name="external_url" value="http://" placeholder="http://"/>
 					<br class="clearBoth"/>
 				</div>
 				
 				<label>Upload image:</label>
-				<input type="file" name="upload" value="" placeholder="file"/>
+				<input type="file" name="upload"/>
 				<br class="clearBoth"/>
 				
 				<label>Content:</label>

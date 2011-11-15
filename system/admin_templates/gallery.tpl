@@ -47,7 +47,7 @@
 			<fieldset>
 				
 				<label>Upload image:</label>
-				<input type="file" name="upload" value="" required="required" placeholder="file"/>
+				<input type="file" name="upload" required="required"/>
 				<br class="clearBoth"/>
 				
 				<label>Description:</label>

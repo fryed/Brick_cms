@@ -22,6 +22,9 @@
 		<div class="messageRight">
 			<p><span class="bold">Message:</span><br/> {$page.message.content}</p>
 		</div>
+	
+		<hr/>
+		<a class="button" href="{$HOME}/admin/inbox">back to inbox</a>
 		
 		<br class="clearBoth"/>
 		
