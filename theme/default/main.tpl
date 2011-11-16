@@ -15,8 +15,6 @@
 
 <title>{$page.title}</title>
 
-<link rel="icon" href="{$HOME}/templates/images/favicon.ico" type="image/x-icon">
-
 </head>
 
 <body>
