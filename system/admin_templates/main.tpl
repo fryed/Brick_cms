@@ -36,7 +36,7 @@
 				
 			<form method="post" action="">
 				<fieldset>
-					<input type="submit" name="action" value="clear cache">
+					<input type="submit" name="action" value="clear cache" title="clear cache">
 				</fieldset>
 			</form>
 			
