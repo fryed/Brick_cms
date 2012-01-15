@@ -4,3 +4,4 @@
 system/lib/php/smarty/admin_compile/*
 system/lib/php/smarty/compile/*
 system/lib/php/smarty/page_cache/*
+error_log.txt
