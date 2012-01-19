@@ -56,6 +56,7 @@ class stripPosts {
 		$value = str_replace("/script>","",$value);
 		$value = str_replace("<?php","",$value);
 		$value = str_replace("?>","",$value);
+		$value = htmlspecialchars($value);
 		$value = mysql_real_escape_string($value);
 		
 		return $value;

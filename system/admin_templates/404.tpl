@@ -31,7 +31,7 @@
 	
 	<nav class="cmsNav">
 		<ul>
-			<li>404</li>
+			<li class="active">404</li>
 		</ul>
 	</nav>	 
 	

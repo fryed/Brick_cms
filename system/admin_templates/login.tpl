@@ -8,9 +8,7 @@
 
 <link href="{$HOME}/system/lib/css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="{$ADMIN_PATH}/css/admin.css" rel="stylesheet" type="text/css" media="screen"/>
-
-<script type="text/javascript" src="{$HOME}/system/lib/js/jquery.js"></script>
-<script type="text/javascript" src="{$ADMIN_PATH}/js/admin.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Duru+Sans" rel="stylesheet" type="text/css"/>
 
 <!--[if lt IE 9]>
 <script src="{$ADMIN_PATH}/js/ieHtml5.js"></script>
@@ -34,7 +32,7 @@
 	
 	<nav class="cmsNav">
 		<ul>
-			<li>Login</li>
+			<li class="active">Login</li>
 		</ul>
 	</nav>	 
 	
@@ -56,11 +54,11 @@
 					<fieldset>
 						
 						<label for="username">Username:</label>
-						<input type="text" id="username" name="username"/>
+						<input type="text" id="username" name="username" placeholder="username" required="required"/>
 						<br class="clearBoth"/>
 						
 						<label for="password">Password:</label>
-						<input type="password" id="password" name="password"/>
+						<input type="password" id="password" name="password" placeholder="password" required="required"/>
 						<br class="clearBoth"/>
 						
 						<input type="submit" name="action" value="LogIn"/>

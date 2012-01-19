@@ -31,7 +31,7 @@
 	
 	<nav class="cmsNav">
 		<ul>
-			<li>Guard dog</li>
+			<li class="active">Guard dog</li>
 		</ul>
 	</nav>	 
 	

@@ -25,7 +25,7 @@
 			
 			<fieldset class="equalInput">
 				
-				<label>Upload logo:</label>
+				<label>Logo:</label>
 				<input type="file" name="upload" required="required"/>
 				<br class="clearBoth"/>
 				
