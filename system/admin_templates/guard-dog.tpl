@@ -8,6 +8,7 @@
 
 <link href="{$HOME}/system/lib/css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="{$ADMIN_PATH}/css/admin.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="http://fonts.googleapis.com/css?family=Lato:400,300,900" rel="stylesheet" type="text/css"/>
 
 <!--[if lt IE 9]>
 <script src="{$ADMIN_PATH}/js/ieHtml5.js"></script>
@@ -45,6 +46,7 @@
 				<hr/>
 			
 				<p class="bold">Too many incorrect login attempts.</p>
+				<p>Your IP has been logged.</p>
 				{if $settings.dev_email}
 				<p>If you are the owner of the site and have forgotten your login details please
 				email <a href="mailto:{$settings.dev_email}">{$settings.dev_email}</a>.</p>
@@ -58,7 +60,7 @@
 	
 	<footer>
 		<div class="pad20">
-			<p>&copy; fryed designs 2011</p>
+			<p>&copy; fryed designs {$smarty.now|date_format:"%Y"}</p>
 		</div>
 	</footer>	
 	

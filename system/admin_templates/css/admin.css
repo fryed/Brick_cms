@@ -368,6 +368,7 @@ header .logo {
 	font-size:50px;
 	font-family:"Rockwell","Lato",Arial,sans-serif;
 	color:#383838;
+	letter-spacing:-3px;
 }
 
 /*-----MAIN NAV-----*/
@@ -435,6 +436,7 @@ header .logo {
 	color:#424242;
 	position:relative;
 	bottom:-1px;
+	text-shadow:1px 1px 0px #fff;
 }
 
 .cmsNav li.active a,

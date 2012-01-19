@@ -95,7 +95,7 @@
 	<footer>
 		
 		<div class="pad20">
-			<p>&copy; fryed designs 2011</p>
+			<p>&copy; fryed designs {$smarty.now|date_format:"%Y"}</p>
 		</div>
 		
 	</footer>
