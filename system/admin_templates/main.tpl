@@ -10,6 +10,7 @@
 <link href="{$ADMIN_PATH}/css/admin.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="{$ADMIN_PATH}/css/jHtmlArea.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="http://fonts.googleapis.com/css?family=Lato:400,300,900" rel="stylesheet" type="text/css"/>
+<link href="{$ADMIN_PATH}/images/favicon.png" rel="icon">
 
 <script type="text/javascript" src="{$HOME}/system/lib/js/jquery.js"></script>
 <script type="text/javascript" src="{$ADMIN_PATH}/js/jHtmlArea.js"></script>

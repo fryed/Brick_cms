@@ -9,6 +9,7 @@
 <link href="{$HOME}/system/lib/css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="{$ADMIN_PATH}/css/admin.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="http://fonts.googleapis.com/css?family=Lato:400,300,900" rel="stylesheet" type="text/css"/>
+<link href="{$ADMIN_PATH}/images/favicon.png" rel="icon">
 
 <!--[if lt IE 9]>
 <script src="{$ADMIN_PATH}/js/ieHtml5.js"></script>
