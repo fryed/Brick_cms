@@ -184,7 +184,7 @@
 		<hr/>
 		
 		<p><span class="bold">Created by:</span> {$page.created_by}</p>
-		<p><span class="bold">Created on:</span> {$page.created}</p>
+		<p><span class="bold">Last edited on:</span> {$page.created}</p>
 		<p><span class="bold">Last edited by:</span> {$page.edited_by}</p>
 		<p><span class="bold">Page views:</span> {$page.page_visits}</p>
 		

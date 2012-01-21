@@ -442,6 +442,7 @@ header .logo {
 .cmsNav li.active a,
 .cmsNav li:hover a {
 	color:#424242;
+	text-shadow:none;
 }
 
 /*--subnav--*/

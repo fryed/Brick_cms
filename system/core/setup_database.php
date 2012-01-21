@@ -851,7 +851,13 @@ $rows = "
 		'My BrickCMS homepage',
 		'home.tpl',
 		'My BrickCMS homepage',
-		'<h2>Welcome to your new homepage</h2><p>Simply log in with username:admin password:password and start editing and adding content.</p>',
+		'<h2>Welcome to Brick::cms</h2>
+		<p>Simply log in to the <a href='admin'>admin area</a> with the details provided below and start editing and adding content.</p>
+		<ul>
+			<li><strong>Username:</strong>username</li>
+			<li><strong>Password:</strong>password</li>
+		</ul>
+		<p>We reccomend you change the default login details as soon as possible.</p>',
 		'/',
 		'/',
 		'This is the description of this specific page.',
@@ -881,7 +887,13 @@ $rows = "
 		'My BrickCMS example page',
 		'page.tpl',
 		'My BrickCMS example page',
-		'<h2>This is an example page</h2><p>Simply log in with username:admin password:password and start editing and adding content.</p>',
+		'<h2>Welcome to Brick::cms</h2>
+		<p>Simply log in to the <a href='admin'>admin area</a> with the details provided below and start editing and adding content.</p>
+		<ul>
+			<li><strong>Username:</strong>username</li>
+			<li><strong>Password:</strong>password</li>
+		</ul>
+		<p>We reccomend you change the default login details as soon as possible.</p>',
 		'/example-page',
 		'/example-page',
 		'1',
@@ -914,7 +926,13 @@ $rows = "
 		'My BrickCMS example sub page',
 		'page.tpl',
 		'My BrickCMS example sub page',
-		'<h2>This is an example sub page</h2><p>Simply log in with username:admin password:password and start editing and adding content.</p>',
+		'<h2>Welcome to Brick::cms</h2>
+		<p>Simply log in to the <a href='admin'>admin area</a> with the details provided below and start editing and adding content.</p>
+		<ul>
+			<li><strong>Username:</strong>username</li>
+			<li><strong>Password:</strong>password</li>
+		</ul>
+		<p>We reccomend you change the default login details as soon as possible.</p>',
 		'/sub-page',
 		'/example-page/sub-page',
 		'/example-page',

@@ -7,6 +7,7 @@ class stripPosts {
 	//set vars
 	var $posts;
 	var $get;
+	var $area;
 	
 	//make post safe
 	public function safePost() {
@@ -56,7 +57,11 @@ class stripPosts {
 		$value = str_replace("/script>","",$value);
 		$value = str_replace("<?php","",$value);
 		$value = str_replace("?>","",$value);
-		$value = htmlspecialchars($value);
+		
+		if($this->area != "admin"){
+			$value = htmlspecialchars($value);
+		}
+		
 		$value = mysql_real_escape_string($value);
 		
 		return $value;

@@ -88,6 +88,7 @@ switch($area){
 $POST = new stripPosts();
 $POST->posts 	= 	$_POST;
 $POST->get 		= 	$_GET;
+$POST->area		=	$area;
 $POST->safePost();
 $POST->safeGet();
 $_POST 			= 	$POST->getPost();
