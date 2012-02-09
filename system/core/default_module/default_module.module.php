@@ -58,8 +58,7 @@ class [module] extends DBconnect {
 	var $settings;
 	
 	//SETUP FUNCTION
-	//this function is automatically called
-	//depending on wether the module is already installed.
+	//this function is only called if module is not already installed.
 	//you should create all your tables within this function.
 	public function setupModule(){
 			
