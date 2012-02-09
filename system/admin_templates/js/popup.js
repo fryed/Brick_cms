@@ -107,12 +107,12 @@ $.fn.confirm = function(options){
 	
 	return this.each(function(){
 		
-		var element = $(this);
-		var form = element.parents("form");
-	
-		element.click(function(e){
+		options.element = $(this);
+		options.form = options.element.parents("form");
+		
+		options.element.click(function(e){
 			e.preventDefault();
-			var href = element.attr("href");
+			var href = options.element.attr("href");
 			var title = "Are you sure?"
 			var content = "<p>"+options.question+"</p>\
 			<input type='button' class='neg button' value='"+options.buttonNeg+"' name='false'/>\
@@ -132,7 +132,7 @@ $.fn.confirm = function(options){
 				answer = false;	
 			closePopup(options.popupSpeed,function(){
 				closeOverlay(options.overlaySpeed,function(){
-					options.callback(element,form,answer);
+					options.callback(options.element,options.form,answer);
 				});
 			});
 		});

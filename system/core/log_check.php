@@ -17,10 +17,17 @@ class handleLogin extends DBconnect {
 		if(isset($_SESSION["banned"])){
 			if($this->logStatus != "guardDog")
 				$this->guardDog();
-		}	
+		}
 		
 		//check for login attempt
-		if(isset($this->posts["username"]) || isset($this->posts["password"])){
+		$logInAttempt = false;
+		if(isset($this->posts["action"])){
+			if($this->posts["action"] == "LogIn")
+				$logInAttempt = true;
+		}
+
+		//check for username and password
+		if((isset($this->posts["username"]) || isset($this->posts["password"])) && $logInAttempt){
 			
 			//count attempts (backwards for messages)
 			if(isset($_SESSION["attempts"]))

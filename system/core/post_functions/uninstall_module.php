@@ -27,6 +27,10 @@ foreach($this->posts as $key => $value){
 	}
 	rmdir($modulePath);
 	
+	//remove from database
+	DBconnect::delete("modules","name",$module);
+	DBconnect::drop($module);
+	
 }
 
 //set message

@@ -857,7 +857,7 @@ $rows = "
 			<li><strong>Username:</strong>username</li>
 			<li><strong>Password:</strong>password</li>
 		</ul>
-		<p>We reccomend you change the default login details as soon as possible.</p>',
+		<p>We recommend you change the default login details as soon as possible.</p>',
 		'/',
 		'/',
 		'This is the description of this specific page.',
