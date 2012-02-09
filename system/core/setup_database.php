@@ -30,7 +30,7 @@ $table = "
 		name varchar(255) not null,
 		template varchar(255) not null default 'system/blog-item.tpl',
 		title varchar(255) not null,
-		content varchar(255) not null,
+		content varchar(5000) not null,
 		uri varchar(255) not null,
 		url varchar(255) not null,
 		section varchar(255) not null default '/blog',
@@ -86,7 +86,7 @@ $table = "
 		brick_name varchar(255) not null,
 		page_template varchar(255) not null default 'global',
 		title varchar(255) not null,
-		content varchar(255) not null,
+		content varchar(5000) not null,
 		enabled tinyint(1) not null default '1'
 	)
 ";
@@ -118,7 +118,7 @@ $table = "
 		id int not null auto_increment, 
 		primary key(id),
 		title varchar(255) not null,
-		content varchar(255) not null,
+		content varchar(5000) not null,
 		img_src varchar(255) not null,
 		img_height int(11) not null,
 		img_width int(11) not null,
@@ -239,7 +239,7 @@ $table = "
 		subject varchar(255) not null,
 		name varchar(255) not null,
 		email varchar(255) not null,
-		content varchar(255) not null,
+		content varchar(5000) not null,
 		status varchar(30) not null default 'new'
 	)
 ";
@@ -274,7 +274,7 @@ $table = "
 		name varchar(255) not null,
 		template varchar(255) not null default 'system/news-item.tpl',
 		title varchar(255) not null,
-		content varchar(255) not null,
+		content varchar(5000) not null,
 		uri varchar(255) not null,
 		url varchar(255) not null,
 		section varchar(255) not null default '/news',
@@ -303,7 +303,7 @@ $table = "
 		name varchar(255) not null,
 		template varchar(255) not null,
 		title varchar(255) not null,
-		content varchar(255) not null,
+		content varchar(5000) not null,
 		uri varchar(255) not null,
 		url varchar(255) not null,
 		section varchar(255) not null,
@@ -416,7 +416,7 @@ $rows = "
 		'My BrickCMS blog homepage',
 		'system/blog.tpl',
 		'My BrickCMS blog post homepage',
-		'The intro for your blog goes here.',
+		'<p>The intro for your blog goes here.</p>',
 		'/blog',
 		'/blog',
 		'This is the description of this specific post.',
@@ -445,7 +445,7 @@ $rows = "
 		'My BrickCMS blog post',
 		'system/blog-item.tpl',
 		'My BrickCMS blog post',
-		'The content for your blog post goes here.',
+		'<p>My first blog post.</p>',
 		'/blog-post',
 		'/blog/blog-post',
 		'This is the description of this specific post.',
@@ -785,13 +785,13 @@ $rows = "
 		url,
 		description,
 		keywords,
-		enebled
+		enabled
 	)VALUES(
 		'system', 
 		'My BrickCMS news homepage',
 		'system/news.tpl',
 		'My BrickCMS news homepage',
-		'The Intro for your news section goes here.',
+		'<p>The Intro for your news section goes here.</p>',
 		'/news',
 		'/news',
 		'This is the description of this specific post.',
@@ -820,7 +820,7 @@ $rows = "
 		'My BrickCMS news item',
 		'system/news-item.tpl',
 		'My BrickCMS news item',
-		'The content for your news item goes here.',
+		'<p>My first news item.</p>',
 		'/news-item',
 		'/news/news-item',
 		'This is the description of this specific post.',
@@ -852,7 +852,7 @@ $rows = "
 		'home.tpl',
 		'My BrickCMS homepage',
 		'<h2>Welcome to Brick::cms</h2>
-		<p>Simply log in to the <a href='admin'>admin area</a> with the details provided below and start editing and adding content.</p>
+		<p>Simply log in to the <a href=\'admin\'>admin area</a> with the details provided below and start editing and adding content.</p>
 		<ul>
 			<li><strong>Username:</strong>username</li>
 			<li><strong>Password:</strong>password</li>
@@ -887,13 +887,7 @@ $rows = "
 		'My BrickCMS example page',
 		'page.tpl',
 		'My BrickCMS example page',
-		'<h2>Welcome to Brick::cms</h2>
-		<p>Simply log in to the <a href='admin'>admin area</a> with the details provided below and start editing and adding content.</p>
-		<ul>
-			<li><strong>Username:</strong>username</li>
-			<li><strong>Password:</strong>password</li>
-		</ul>
-		<p>We reccomend you change the default login details as soon as possible.</p>',
+		'<p>This is an example page.</p>',
 		'/example-page',
 		'/example-page',
 		'1',
@@ -926,13 +920,7 @@ $rows = "
 		'My BrickCMS example sub page',
 		'page.tpl',
 		'My BrickCMS example sub page',
-		'<h2>Welcome to Brick::cms</h2>
-		<p>Simply log in to the <a href='admin'>admin area</a> with the details provided below and start editing and adding content.</p>
-		<ul>
-			<li><strong>Username:</strong>username</li>
-			<li><strong>Password:</strong>password</li>
-		</ul>
-		<p>We reccomend you change the default login details as soon as possible.</p>',
+		'<p>This is an example subpage.</p>',
 		'/sub-page',
 		'/example-page/sub-page',
 		'/example-page',

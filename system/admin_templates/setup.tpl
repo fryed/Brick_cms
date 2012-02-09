@@ -39,7 +39,7 @@
 	
 	<nav class="cmsNav">
 		<ul>
-			<li>Setup</li>
+			<li class="active">Setup</li>
 		</ul>
 	</nav>	 
 
