@@ -15,8 +15,15 @@ $themes					=	$DIRreader->getFiles();
 //loop posts
 foreach($this->posts as $key => $value){
 	
-	//delete modules
+	//define module
 	$module = $key;
+	
+	//run custom module uninstall function
+	include("modules/".$module."/".$module.".module.php");
+	$moduleOb = new $module();
+	$moduleOb->uninstallModule();
+	
+	//delete modules
 	$modulePath = "modules/".$module;
 	unlink($modulePath."/".$module.".module.php");
 	unlink($modulePath."/".$module.".admin.tpl");
@@ -29,7 +36,6 @@ foreach($this->posts as $key => $value){
 	
 	//remove from database
 	DBconnect::delete("modules","name",$module);
-	DBconnect::drop($module);
 	
 }
 

@@ -143,6 +143,17 @@ class [module] extends DBconnect {
 		return $this->module;
 		
 	}
+	
+	//UNINSTALL MODULE
+	//the function called when the user chooses 
+	//to uninstall the module. you should drop all custom
+	//database tables and tidy up here.
+	public function uninstallModule(){
+		
+		//drop custom tables
+		DBconnect::drop("[module]");
+		
+	}
 
 }
 

@@ -49,8 +49,8 @@ $zip = zip_open($module["tmp_name"]);
 while($zipEntry = zip_read($zip)){
 	
 	//get file info
-	$fileName 		= str_replace($moduleName,"",zip_entry_name($zipEntry));
-	$fileContents 	= zip_entry_read($zipEntry);
+	$fileName 		= preg_replace("/$moduleName/","",zip_entry_name($zipEntry),1);
+	$fileContents 	= zip_entry_read($zipEntry,1000000);
 	$paths			= array();
 	
 	//check for core file

@@ -1,6 +1,6 @@
 <section class="mainCol col">
 
-	<h1>{$page.title}</h1>
+	<h1>Module: {$page.title}</h1>
 	<hr/>
 	
 	<ul id="tabs">

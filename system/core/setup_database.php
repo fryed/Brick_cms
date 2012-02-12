@@ -970,7 +970,7 @@ $rows = "
 		'jpg,JPG,jpeg,png,PNG,gif,GIF,ico',
 		'doc,DOC,docx,DOCX,pdf,PDF,zip,ZIP',
 		'0',
-		'dev@i_built_the_site.com',
+		'dev@example.com',
 		'0'
 	)
 ";

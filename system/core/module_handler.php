@@ -79,6 +79,7 @@ class MODhandler extends DBconnect{
 			//if successfully installed update db	
 			if($success)
 				DBconnect::update("modules","installed","1",$params);
+			
 		}	
 		
 		//if module is installed run module
@@ -91,8 +92,10 @@ class MODhandler extends DBconnect{
 			$moduleInfo = $moduleOb->returnModule();
 			
 			//send to module array if no module template
-			if(!isset($moduleInfo["template"]))
+			if(!isset($moduleInfo["template"])){
 				$this->moduleInfoArray[$module] = $moduleInfo;
+				$moduleInfo["template"] = "global";
+			}
 			
 			//if the page exists
 			if(isset($this->pageInfoArray["template"])){
@@ -101,7 +104,7 @@ class MODhandler extends DBconnect{
 				if($this->pageInfoArray["template"] == $moduleInfo["template"])
 					$this->moduleInfoArray[$module] = $moduleInfo;
 					
-				//always sent to admin module page
+				//always send to admin module page
 				if($this->pageInfoArray["template"] == "../../modules/".$module."/".$module.".admin.tpl")
 					$this->moduleInfoArray[$module] = $moduleInfo;
 			

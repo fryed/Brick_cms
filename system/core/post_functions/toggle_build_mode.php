@@ -10,10 +10,13 @@ unset($this->posts["action"]);
 foreach($this->posts as $key => $value){
 	
 	//set params
-	$params = "WHERE name = ".$key;
+	$params = "WHERE name = '".$key."'";
 	
-	//toogle build modes
-	if($value == "on"){
+	//get build mode
+	$bm = DBconnect::query("build_mode","modules",$params);
+	
+	//toogle build mode
+	if(!$bm["build_mode"]){
 		DBconnect::update("modules","build_mode","1",$params);
 	}else{
 		DBconnect::update("modules","build_mode","0",$params);
