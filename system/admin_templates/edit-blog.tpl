@@ -133,7 +133,7 @@
 				
 				{foreach from=$page.images item=image}
 					<div class="imageHolder">
-						<img src="{$HOME}{$image.src}" width="120" alt="{$image.description}"/>
+						<img src="{$HOME}/{$image.src}" width="120" alt="{$image.description}"/>
 						<div class="inputHolder">
 							<input type="radio" name="image_id" value="{$image.id}" {if $image.id == $page.image_id}checked="checked"{/if}/>
 						</div>
@@ -203,7 +203,7 @@
 					<div class="pad10">
 						{foreach from=$page.downloads item=download}
 							<div class="download">
-								<a href="{$HOME}{$download.src}" title="{$download.description}">{$download.name}</a>
+								<a href="{$HOME}/{$download.src}" title="{$download.description}">{$download.name}</a>
 								<input type="checkbox" name="item{$download.id}"/>
 							</div>
 						{foreachelse}

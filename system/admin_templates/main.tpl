@@ -24,8 +24,6 @@
 
 <title>Brick :: {$page.title}</title>
 
-<link rel="icon" href="{$site.favicon.src}" type="image/x-icon">
-
 </head>
 
 <body class="nojs" data-area="{$page.active}">

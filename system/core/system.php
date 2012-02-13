@@ -45,7 +45,7 @@ if($settingsArray["custom_errors"]){
 
 //get site info
 $SITE = new SITEinfo();
-$siteInfoArray				=	$SITE->getInfo();
+$siteInfoArray = $SITE->getInfo();
 
 //run smarty
 $CMS = new Smarty();
@@ -366,7 +366,9 @@ $pageInfoArray			=	$IMG->getImages();
 $siteInfoArray["user"] 		=	$user;
 $siteInfoArray["user_type"] =	$userType;
 
-//assign home path
+//assign paths
+$CMS->assign("THEME_PATH",$homePath."/theme/".$settingsArray["theme"]);
+$CMS->assign("THEME","theme/".$settingsArray["theme"]);
 $CMS->assign("HOME",$homePath);
 $CMS->assign("ADMIN_HOME",$homePath."/admin");
 $CMS->assign("ADMIN_PATH",$homePath."/system/admin_templates");

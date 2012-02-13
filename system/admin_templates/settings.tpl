@@ -108,7 +108,7 @@
 					<div class="row">
 						
 						<div class="imageHolder">
-							<img src="{$HOME}{$site.favicon.src}" width="50" alt="favicon"/>
+							<img src="{$HOME}/{$site.favicon.src}" width="50" alt="favicon"/>
 							<div class="inputHolder">
 								<input type="radio" name="item{$site.favicon.id}" value="on" checked="checked"/>
 							</div>

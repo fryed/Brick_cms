@@ -16,7 +16,7 @@
 				
 				{foreach from=$page.images item=image}
 					<div class="imageHolder">
-						<img src="{$HOME}{$image.src}" height="100" alt="{$image.description}"/>
+						<img src="{$HOME}/{$image.src}" height="100" alt="{$image.description}"/>
 						<div class="inputHolder">
 							<input type="checkbox" name="item{$image.id}"/>
 						</div>

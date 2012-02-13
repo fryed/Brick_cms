@@ -21,8 +21,6 @@
 
 <title>Brick :: Setup</title>
 
-<link rel="icon" href="{$site.favicon.src}" type="image/x-icon">
-
 </head>
 
 <body class="nojs" id="misc">

@@ -37,14 +37,14 @@ if(!$errors){
 		
 		case "images":
 		$imageInfo 	= $UPLOAD->getUploadInfo();
-		$imageSrc	= "/system/data/images/".$imageInfo["name"];
+		$imageSrc	= "system/data/images/".$imageInfo["name"];
 		$keys 		= $keys.",src,width,height";
 		$values		= $values.",'".$imageSrc."','".$imageInfo["width"]."','".$imageInfo["height"]."'";
 		break;
 		
 		case "downloads":
 		$downloadInfo 	= $UPLOAD->getUploadInfo();
-		$downloadHref 	= "/system/data/downloads/".$downloadInfo["name"];
+		$downloadHref 	= "system/data/downloads/".$downloadInfo["name"];
 		$keys 			= $keys.",src";
 		$values			= $values.",'".$downloadHref."'";
 		break;

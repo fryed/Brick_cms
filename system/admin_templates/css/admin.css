@@ -28,15 +28,35 @@ p {
 	color:#424242;
 }
 
+a {
+	text-decoration:none;
+}
+
 a:hover {
 	text-decoration:underline;
+}
+
+h1 {
+	font-size:20px;
+}	
+
+h2 {
+	font-size:18px;
+}
+
+h3 {
+	font-size:16px;
+}
+
+h4 {
+	font-size:14px;
 }
 
 h3 {
 	padding-bottom:5px;
 }
 
-ul li {
+ul,ul li {
 	list-style-type:none;
 }
 
@@ -141,6 +161,12 @@ input[type="submit"],
 	font-family:"Rockwell",Arial,sans-serif;
 	font-size:11px;
 	margin:5px 0 5px 5px;
+	box-shadow:none !important;
+	-moz-box-shadow:none !important;
+	-webkit-box-shadow:none !important;
+	-ms-box-shadow:none !important;
+	-o-box-shadow:none !important;
+	font-weight:normal;
 }
 
 input[type="submit"]:hover,
@@ -400,6 +426,7 @@ header .logo {
 	border-right:1px solid #565555;
 	position:relative;
 	cursor:pointer;
+	text-align:center;
 }
 
 .cmsNav ul li:first-child {
@@ -470,6 +497,7 @@ header .logo {
 	width:auto;
 	border:none;
 	border-top:1px dotted #ccc;
+	text-align:left;
 }
 
 .cmsNav .cmsSubNav li:first-child {
@@ -633,10 +661,15 @@ header .logo {
 
 .leftCol .mainNav {
 	padding:0;
+	margin:0px;
+}
+
+.leftCol .subNav {
+	margin:5px 0 0 0;
 }
 
 .leftCol .mainNav li {
-	padding:0 0 0 10px;
+	padding:5px 0 5px 10px;
 }
 
 .leftCol .mainNav .clicker {
@@ -652,7 +685,7 @@ header .logo {
 	cursor:pointer;
 	visibility:hidden;
 	float:left;
-	margin:8px 5px 0 0;
+	margin:4px 5px 0 0;
 	text-indent:-1px;
 }
 
@@ -661,14 +694,14 @@ header .logo {
 }
 
 .leftCol .mainNav li a {
-	padding:5px 0 5px 16px;
-	background:url(../images/page-icon.gif) no-repeat 0px 5px;
+	padding:0 0 0 16px;
+	background:url(../images/page-icon.gif) no-repeat 0px 2px;
 	display:inline-block;
 	width:80%;
 }
 
 .leftCol .mainNav li.hasChildren > a {
-	background:url(../images/folder-icon.gif) no-repeat 0px 6px;
+	background:url(../images/folder-icon.gif) no-repeat 0px 3px;
 }
 
 .leftCol .mainNav li.active a {
@@ -998,21 +1031,13 @@ table {
 	width:100%;
 }
 
+table td,
 table th {
-	border-bottom:1px solid #ccc;
-	padding:10px 0px;
-	font-weight:900;
+	vertical-align:middle;
 }
 
 table th.check {
 	width:20px;
-}
-
-table td {
-	border-top:1px solid #fff;
-	border-bottom:1px dotted #ccc;
-	padding:10px 5px;
-	vertical-align:middle;
 }
 
 table tr:hover td {

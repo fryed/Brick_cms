@@ -23,7 +23,7 @@
 				<div class="imageHolder">
 					<a href="{$ADMIN_HOME}{$article.url}">
 						{if $article.main_image}
-						<img src="{$HOME}{$article.main_image.src}" width="50" alt="{$article.main_image.description}"/>
+						<img src="{$HOME}/{$article.main_image.src}" width="50" alt="{$article.main_image.description}"/>
 						{else}
 						<div class="noImage"></div>
 						{/if}

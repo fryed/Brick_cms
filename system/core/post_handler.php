@@ -313,11 +313,11 @@ class postHandler extends DBconnect {
 		
 		//delete resources if set
 		if(isset($this->posts["src"])){
-			$src = substr($this->posts["src"],1);
+			$src = $this->posts["src"];
 			if(file_exists($src))
 				unlink($src);
 		}elseif(isset($this->posts["img_src"])){
-			$src = substr($this->posts["img_src"],1);
+			$src = $this->posts["img_src"];
 			if(file_exists($src))
 				unlink($src);
 		}

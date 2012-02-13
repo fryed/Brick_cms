@@ -2,39 +2,33 @@
 
 {$page.content}
 
-<h3>comments</h3>
+<div class="itemList">
+	
+	<h4>Comments:</h4>
+	
+	{foreach from=$page.comments item=comment}
+	<div class="item">
+		<h5>{$comment.name} - <span class="date">{$comment.created}</span></h5>
+		<p>Comment:{$comment.comment}</p>	
+	</div>
+	{foreachelse}	
+	<div class="item">
+		<p>No comments found.</p>
+	</div>
+	{/foreach}
 
-{foreach from=$page.comments item=comment}
-	
-	<p>by:{$comment.name}</p>
-	<p>on:{$comment.created}</p>
-	<p>Comment:{$comment.comment}</p>	
-	<hr/>
-	
-{foreachelse}	
-	
-	no comments found
-	
-{/foreach}
+</div>
 
 <form method="post" action="">
 	
-	<fieldset>
-		
-		<legend>Add comment</legend>
-		
-		<label>Name:</label>
-		<input type="text" name="name" value=""/>
-		<br/>
-		<textarea name="comment" rows="10" cols="100"></textarea>
-		
-		<input type="hidden" name="belongs_to" value="{$page.id}"/>
-		<input type="hidden" name="table" value="blog_comments"/>
-		<br/>
-		<input type="submit" name="action" value="add comment"/>	
-		
-	</fieldset>
+	<h4>Add comment:</h4>
+	<input type="text" name="name" value="" required="required" placeholder="name"/>
+	<textarea name="comment" required="required" placeholder="comment"></textarea>
 	
+	<input type="hidden" name="belongs_to" value="{$page.id}"/>
+	<input type="hidden" name="table" value="blog_comments"/>
+	<input type="submit" name="action" value="add comment"/>	
+		
 </form>
 
 <br/>

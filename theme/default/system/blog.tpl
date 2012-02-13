@@ -1,57 +1,21 @@
-<h2>Blog List</h2>
-
 {$page.content}
 
-<br/>
-
-<h2>Blog List</h2>
-
-{foreach from=$blog.menu item=category}
-
-	<h3>{$category.name}</h3>
+<div class="itemList">
 	
-	{foreach from=$category.pages item=article}
-		
-		{if $article.main_image}
-		<img src="{$HOME}{$article.main_image.src}" width="{$article.main_image.width}" height="{$article.main_image.height}" alt="{$article.main_image.description}"/>
-		{else}
-		no main image set
-		{/if}
-		<br/>
-		{$article.name}
-		<br/>
+	<h4>Blog posts:</h4>
+
+	{foreach from=$blog.pages item=article}
+	<div class="item">
+		<h5>{$article.name}</h5>
+		{$article.content}
 		<a href="{$HOME}{$article.url}">Read article...</a>
-		<br/>
-		<hr/>
-		
+	</div>
 	{foreachelse}
-		No articles found
+	<div class="item">
+		<p>No articles found.</p>
+	</div>
 	{/foreach}
 	
-{foreachelse}
-	No categories found
-{/foreach}
-
-<div style="background:#ccc; padding:10px;">
-	
-<h3>Blog pages</h3>
-
-{foreach from=$blog.pages item=article}
-	{if $article.main_image}
-	<img src="{$HOME}{$article.main_image.src}" width="{$article.main_image.width}" height="{$article.main_image.height}" alt="{$article.main_image.description}"/>
-	{else}
-	no main image set
-	{/if}
-	<br/>
-	{$article.name}
-	<br/>
-	<a href="{$HOME}{$article.url}">Read article...</a>
-	<br/>
-	<hr/>
-{foreachelse}
-	no articles found
-{/foreach}
-
-{include file="system/paging.tpl"}
+	{include file="system/paging.tpl"}
 
 </div>

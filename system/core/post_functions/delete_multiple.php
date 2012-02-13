@@ -36,12 +36,12 @@ foreach($this->posts as $key => $value){
 						DBconnect::delete("images","id",$image["id"]);
 						
 						//delete actual image
-						$src = substr($image["src"],1);
+						$src = $image["src"];
 						if(file_exists($src))
 							unlink($src);
 					}
 				}
-				break;	
+				break;
 				
 				case "blog_categories":
 				//set blog item categories to general if in deleted cat

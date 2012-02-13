@@ -42,11 +42,25 @@ if($this->posts["search"] == ""){
 				
 			foreach($page as $key => $value){
 				if($key == "content" || $key == "title" || $key == "name" || $key == "url"){
-						
-					$found = strpos($value,$this->posts["search"]);	
-					if($found !== false){							
-						$highlight		= "<span class='highLight'>".$this->posts["search"]."</span>";
-						$highlighted 	= str_replace($this->posts["search"],$highlight,$value);
+					
+					//define terms
+					$term = $this->posts["search"];
+					$termLower = strtolower($this->posts["search"]);
+					$termUpper = strtoupper($this->posts["search"]);
+					
+					//define value
+					$valLower = strtolower($value);
+					
+					//check if term found
+					$found = strpos($valLower,$termLower);
+					
+					//if found
+					if($found !== false){
+						$value 			= strip_tags($value);							
+						$highlight		= "<span class='highLight'>".$term."</span>";
+						$highlighted 	= str_replace($termLower,$highlight,$value);
+						$highlighted 	= str_replace($termUpper,$highlight,$value);
+						$highlighted 	= str_replace($term,$highlight,$value);
 						$page[$key]		= $highlighted;
 						$result = true;
 					}	

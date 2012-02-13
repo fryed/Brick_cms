@@ -1,37 +1,27 @@
 {include file="system/messages.tpl"}
 
-<form method="post" action="">
+<div class="contactForm">
 	
-	<fieldset>
+	<h4>Contact us:</h4>
+	
+	<form method="post" action="">
+	
+		<input type="text" name="subject" value="" required="required" placeholder="subject"/>
 		
-		<label>subject:</label>
-		<input type="text" name="subject" value=""/>
-		<br/>
+		<input type="text" name="name" value="" required="required" placeholder="name"/>
 		
-		<label>name:</label>
-		<input type="text" name="name" value=""/>
-		<br/>
+		<input type="text" name="address" value="" required="required" placeholder="address"/>
 		
-		<label>address:</label>
-		<input type="text" name="address" value=""/>
-		<br/>
+		<input type="email" name="email" value="" required="required" placeholder="email"/>
 		
-		<label>email:</label>
-		<input type="text" name="email" value=""/>
-		<br/>
+		<input type="number" name="tel" value="" required="required" placeholder="phone"/>
 		
-		<label>tel:</label>
-		<input type="text" name="tel" value=""/>
-		<br/>
-		
-		<label>content</label><br/>
-		<textarea rows="5" cols="100" name="content"></textarea>
+		<textarea name="content" required="required" placeholder="message"></textarea>
 		
 		<input type="hidden" name="table" value="messages"/>
 		
-		<br/>
 		<input type="submit" name="action" value="send message"/>
-		
-	</fieldset>
 	
-</form>
+	</form>
+	
+</div>

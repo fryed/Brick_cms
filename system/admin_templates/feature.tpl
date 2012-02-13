@@ -19,7 +19,7 @@
 			<form method="post" action="" enctype="multipart/form-data">
 				
 				<div class="imageHolder">
-					<img src="{$HOME}{$feature.img_src}" width="50" alt="{$feature.title}"/>
+					<img src="{$HOME}/{$feature.img_src}" width="50" alt="{$feature.title}"/>
 				</div>
 				
 				<h4>{$feature.title}</h4>

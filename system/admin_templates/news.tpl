@@ -22,7 +22,7 @@
 				<div class="imageHolder">
 					<a href="{$ADMIN_HOME}{$article.url}">
 						{if $article.main_image}
-						<img src="{$HOME}{$article.main_image.src}" width="50" alt="{$article.main_image.description}"/>
+						<img src="{$HOME}/{$article.main_image.src}" width="50" alt="{$article.main_image.description}"/>
 						{else}
 						<div class="noImage"></div>
 						{/if}
@@ -112,7 +112,7 @@
 				{foreach from=$page.images item=image}
 					{$image.id}<br/>
 					<div class="imageHolder">
-						<img src="{$HOME}{$image.src}" width="120" alt="{$image.description}"/>
+						<img src="{$HOME}/{$image.src}" width="120" alt="{$image.description}"/>
 						<div class="inputHolder">
 							<input type="radio" name="image_id" value="{$image.id}" {if $image.id == $page.image_id}checked="checked"{/if}/>
 						</div>

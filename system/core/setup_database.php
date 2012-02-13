@@ -413,7 +413,7 @@ $rows = "
 		enabled
 	)VALUES(
 		'system', 
-		'My BrickCMS blog homepage',
+		'My blog homepage',
 		'system/blog.tpl',
 		'My BrickCMS blog post homepage',
 		'<p>The intro for your blog goes here.</p>',
@@ -444,7 +444,7 @@ $rows = "
 		'system', 
 		'My BrickCMS blog post',
 		'system/blog-item.tpl',
-		'My BrickCMS blog post',
+		'My blog post',
 		'<p>My first blog post.</p>',
 		'/blog-post',
 		'/blog/blog-post',
@@ -481,7 +481,7 @@ $rows = "
 		area
 	)VALUES(
 		'Example download', 
-		'/system/data/downloads/24-Dec-11_12-00-00_example.pdf',
+		'system/data/downloads/24-Dec-11_12-00-00_example.pdf',
 		'This is an example download',
 		'1', 
 		'pages'
@@ -504,7 +504,7 @@ $rows = "
 	)VALUES(
 		'Example feature 1',
 		'This is an example feature item.' ,
-		'/system/data/images/feature1.gif',
+		'system/data/images/feature1.gif',
 		'200',
 		'1000', 
 		'/example-page'
@@ -525,7 +525,7 @@ $rows = "
 	)VALUES(
 		'Example feature 2',
 		'This is another example feature item.',
-		'/system/data/images/feature2.gif',
+		'system/data/images/feature2.gif',
 		'200',
 		'1000', 
 		'/example-page/sub-page'
@@ -632,7 +632,7 @@ $rows = "
 		description,
 		belongs_to
 	)VALUES(
-		'/system/data/images/brick_logo.gif',
+		'system/data/images/brick_logo.png',
 		'200', 
 		'100', 
 		'This is the brickCMS logo',
@@ -651,7 +651,7 @@ $rows = "
 		description,
 		belongs_to
 	)VALUES(
-		'/system/data/images/brick_favicon.ico',
+		'system/data/images/favicon.png',
 		'10', 
 		'10', 
 		'This is the brickCMS fav icon',
@@ -670,7 +670,7 @@ $rows = "
 		description,
 		belongs_to
 	)VALUES(
-		'/system/data/images/example_image.gif',
+		'system/data/images/example_image.gif',
 		'200', 
 		'200', 
 		'This is an example image',
@@ -765,7 +765,7 @@ $rows = "
 		'Welcome to brickCMS',
 		'System',
 		'noreply@system.com', 
-		'<h2>Welcome to brickCMS.</h2><p>This is the brickCMS inbox.<br/>All messages sent through the site will appear here, as well as being emailed to the address set in admin/settings.</p>'
+		'<h4>Welcome to brickCMS.</h4><p>This is the brickCMS inbox.<br/>All messages sent through the site will appear here, as well as being emailed to the address set in admin/settings.</p>'
 	)
 ";
 //create default message
@@ -788,7 +788,7 @@ $rows = "
 		enabled
 	)VALUES(
 		'system', 
-		'My BrickCMS news homepage',
+		'My news homepage',
 		'system/news.tpl',
 		'My BrickCMS news homepage',
 		'<p>The Intro for your news section goes here.</p>',
@@ -817,7 +817,7 @@ $rows = "
 		enabled
 	)VALUES(
 		'system', 
-		'My BrickCMS news item',
+		'My news item',
 		'system/news-item.tpl',
 		'My BrickCMS news item',
 		'<p>My first news item.</p>',
@@ -848,10 +848,10 @@ $rows = "
 		enabled
 	)VALUES(
 		'system', 
-		'My BrickCMS homepage',
+		'Home',
 		'home.tpl',
 		'My BrickCMS homepage',
-		'<h2>Welcome to Brick::cms</h2>
+		'<h4>Welcome to Brick::cms</h4>
 		<p>Simply log in to the <a href=\'admin\'>admin area</a> with the details provided below and start editing and adding content.</p>
 		<ul>
 			<li><strong>Username:</strong>username</li>
@@ -886,7 +886,7 @@ $rows = "
 		'system', 
 		'My BrickCMS example page',
 		'page.tpl',
-		'My BrickCMS example page',
+		'Example page',
 		'<p>This is an example page.</p>',
 		'/example-page',
 		'/example-page',
@@ -917,7 +917,7 @@ $rows = "
 		enabled
 	)VALUES(
 		'system', 
-		'My BrickCMS example sub page',
+		'Example sub page',
 		'page.tpl',
 		'My BrickCMS example sub page',
 		'<p>This is an example subpage.</p>',

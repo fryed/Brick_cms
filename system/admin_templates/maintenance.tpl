@@ -8,14 +8,13 @@
 
 <link href="{$HOME}/system/lib/css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="{$ADMIN_PATH}/css/admin.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="{$HOME}/system/admin_templates/css/jHtmlArea.css" rel="stylesheet" type="text/css" media="screen"/>
 
 <!--[if lt IE 9]>
 <script src="{$ADMIN_PATH}/js/ieHtml5.js"></script>
 <![endif]-->
 
 <title>Brick :: Maintenance</title>
-
-<link rel="icon" href="{$site.favicon.src}" type="image/x-icon">
 
 </head>
 

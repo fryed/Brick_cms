@@ -8,7 +8,7 @@
 				<hr/>
 				
 				<div class="innerPod">
-					<img src="{$HOME}{$site.logo.src}" alt="{$site.logo.description}"/>
+					<img src="{$HOME}/{$site.logo.src}" alt="{$site.logo.description}"/>
 					<div class="deleteLogo">
 						<input type="submit" name="action" value="delete logo"/>
 					</div>
