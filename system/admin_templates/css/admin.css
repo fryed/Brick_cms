@@ -207,6 +207,7 @@ input[type="submit"][disabled="disabled"] {
 
 .jHtmlArea #textEditor {
 	width:97% !important;
+	margin:5px 0 0 0;
 } 
 
 .jHtmlArea iframe {
@@ -672,6 +673,10 @@ header .logo {
 	padding:5px 0 5px 10px;
 }
 
+.leftCol li.hasChildren li:last-child {
+	padding:5px 0 0 10px;
+}
+
 .leftCol .mainNav .clicker {
 	border:1px solid #424242;
 	background:#ccc;
@@ -730,8 +735,13 @@ header .logo {
 	
 }
 
+.leftCol .editing li.hasChildren {
+	padding-bottom:5px;
+}
+
 .editing .subNav {
 	padding:0 0 0 10px;
+	margin:0px;
 }
 
 .editing li.dragger {
@@ -775,7 +785,7 @@ header .logo {
 	height:10px;
 	text-align:center;
 	line-height:10px;
-	margin:5px;
+	margin:2px 5px;
 }
 
 /*--add a link--*/

@@ -89,6 +89,8 @@
 				<input type="hidden" name="id" value="{$page.id}"/>
 				<input type="hidden" name="edited_by" value="{$site.user}"/>
 				<input type="hidden" name="table" value="news"/>
+				<input type="hidden" name="enabled" value="1"/>
+				<input type="hidden" name="url" value="/news"/>
 				
 				<input type="submit" name="action" value="save changes"/>	
 				

@@ -12,7 +12,7 @@ class NAVbuilder extends DBconnect {
 	public function build(){
 		
 		$this->menuArray 	= 	DBconnect::queryArray("*","$this->menu","ORDER BY menu_order");
-
+		
 		$this->menu = array();
 		
 		if($this->menuArray){
@@ -20,7 +20,11 @@ class NAVbuilder extends DBconnect {
 			foreach($this->menuArray as $key => $menuItem){
 					
 				//check if enabled
-				$menuItem = $this->checkEnabled($menuItem);	
+				if($menuItem["type"] == "link"){
+					$menuItem["enabled"] = true;
+				}else{
+					$menuItem = $this->checkEnabled($menuItem);	
+				}
 							
 				if($menuItem["enabled"] || $this->area == "admin"){ 	
 				

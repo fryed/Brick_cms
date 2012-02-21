@@ -85,17 +85,6 @@ h6 {
 	outline:none;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-	border:1px dotted #2e8cab;
-	-moz-box-shadow:0px 0px 5px #c8f1ff;
-	-webkit-box-shadow:0px 0px 5px #c8f1ff;
-	-ms-box-shadow:0px 0px 5px #c8f1ff;
-	-o-box-shadow:0px 0px 5px #c8f1ff;
-	outline:none;
-}
-
 p { 
 	line-height:1.3em;
 	padding-bottom:10px;

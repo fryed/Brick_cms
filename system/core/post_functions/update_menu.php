@@ -68,7 +68,7 @@ foreach($this->posts as $key => $value){
 
 //set message
 $_SESSION["messages"][] = "Message: Menu updated.";
-header("Location: ".$this->homePath."/admin".$this->pageUrl);
+header("Location: ".$this->homePath."/admin");
 exit;
 
 ?>

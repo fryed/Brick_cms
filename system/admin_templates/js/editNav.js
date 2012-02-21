@@ -23,7 +23,7 @@ $.fn.editNav = function(options){
 		element.find(".subNav").show();
 		//get element height
 		var elHeight = element.height();
-		element.css("height",elHeight);
+		//element.css("height",elHeight);
 
 		//stop the links working
 		element.find("a").click(function(e){
@@ -203,16 +203,19 @@ $.fn.editNav = function(options){
 				}
 			});
 			//sort out remaining html
-			li.each(function(){
-				var li = $(this);
-				var ul = li.find("ul");
+			li.each(function(i){
+				var ul = $(this).find("> ul");
 				var isUl = ul.length;
 				if(isUl > 0){
-					var newUl = ul.clone();
-					ul.remove();
-					li.after(newUl);
+					ul.each(function(){
+						var newUl = $(this).clone().addClass("cloned");
+						$(this).remove();
+						element.find("li:eq("+i+")").after(newUl)
+					});
 				}
 			});
+			//more tidying
+			element.find("li ul").remove();
 		}
 		
 	});

@@ -135,7 +135,6 @@
 				<br class="clearBoth"/>
 
 				<label>Content:</label>
-				<br class="clearBoth"/>
 				<textarea id="textEditor" rows="10" cols="100" name="content">{$page.content}</textarea>
 				<br class="clearBoth"/>
 				
@@ -150,6 +149,8 @@
 				<input type="hidden" name="id" value="{$page.id}"/>
 				<input type="hidden" name="edited_by" value="{$site.user}"/>
 				<input type="hidden" name="table" value="blog"/>
+				<input type="hidden" name="enabled" value="1"/>
+				<input type="hidden" name="url" value="/blog"/>
 				
 				<input type="submit" name="action" value="save changes"/>	
 				

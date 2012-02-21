@@ -31,7 +31,7 @@ class pageLister extends DBconnect{
 				
 				//only bring max no back	
 				if($this->maxNo){
-					if($i == $this->maxNo) break;;
+					if($i == $this->maxNo) break;
 				}		
 			
 				$page["main_image"] = array();

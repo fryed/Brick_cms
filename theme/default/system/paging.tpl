@@ -1,4 +1,4 @@
-<form method="post" action="">
+<form class="paging" method="post" action="">
 	
 	<fieldset>
 		

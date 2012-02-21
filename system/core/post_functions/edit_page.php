@@ -44,23 +44,27 @@ if(isset($this->posts["enabled"]))
 else
 	$this->posts["enabled"] = false;
 
-//update menu
-$parent		= $this->posts["parent"];
-$menuParams = "WHERE page_id ='".$pageId."'";	
-DBconnect::update("main_nav","parent",$parent,$menuParams);
-
 //save post data
 $this->updateTable($params);
 
-//tables to check for changes
-$checkTable = array("main_nav","header_nav","footer_nav");
-
-//look for matching menu id
-$params = "WHERE page_id = '".$pageId."'";	
-
-//check for name change
-foreach($checkTable as $table){
-	DBconnect::update($table,"name",$this->posts["name"],$params);
+//update menu if page
+if($this->posts["table"] == "pages"){
+	
+	$parent		= $this->posts["parent"];
+	$menuParams = "WHERE page_id ='".$pageId."'";	
+	DBconnect::update("main_nav","parent",$parent,$menuParams);
+	
+	//tables to check for changes
+	$checkTable = array("main_nav","header_nav","footer_nav");
+	
+	//look for matching menu id
+	$params = "WHERE page_id = '".$pageId."'";	
+	
+	//check for name change
+	foreach($checkTable as $table){
+		DBconnect::update($table,"name",$this->posts["name"],$params);
+	}
+	
 }
 
 //set message

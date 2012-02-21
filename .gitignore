@@ -5,3 +5,10 @@ system/lib/php/smarty/admin_compile/*
 system/lib/php/smarty/compile/*
 system/lib/php/smarty/page_cache/*
 error_log.txt
+theme/fryed.co.uk
+modules/twitterFeed
+modules/stackOverflow
+modules/etsyFeed
+error_log.txt
+system/data/images/fryed_logo.png
+system/data/images/fryed_logo.png
